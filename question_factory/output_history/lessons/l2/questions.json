@@ -1,0 +1,371 @@
+{
+  "book_id": "b",
+  "unit_id": "u",
+  "topic_id": "t",
+  "lesson_id": "l2",
+  "lesson_title": "الحياة حول النيل",
+  "lesson_minutes": 0,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "default",
+  "icons": {
+    "pharaohs": "subj:📜:فراعنة",
+    "pyramids": "subj:📜:أهرامات",
+    "writing": "💧",
+    "nile": "🌍",
+    "farming": "🌍",
+    "trade": "subj:📜:تجارة"
+  },
+  "coverage": {
+    "concepts": 3,
+    "ready": 3,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 12,
+  "concepts": [
+    {
+      "concept_id": "nile",
+      "title": "نهر النيل",
+      "difficulty": "",
+      "minutes": 0,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «نهر النيل»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "نهر النيل: نهر عاشت حوله الحضارة المصرية؛ يسقي الأرض"
+          ],
+          "concepts": [
+            "nile"
+          ],
+          "target": "nile",
+          "options": [
+            "نهر عاشت حوله الحضارة المصرية؛ يسقي الأرض",
+            "تبادل البضائع بين الناس والمدن",
+            "حكّام مصر القديمة؛ بنوا الأهرامات",
+            "زراعة الأرض قرب النهر لإنتاج الطعام"
+          ],
+          "answer": "نهر عاشت حوله الحضارة المصرية؛ يسقي الأرض"
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «الحياة حول النيل». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «نهر النيل»: نهر عاشت حوله الحضارة المصرية؛ يسقي الأرض"
+          ],
+          "concepts": [
+            "nile"
+          ],
+          "target": "nile",
+          "clues": [
+            "يسقي الأرض",
+            "نهر عاشت حوله الحضارة المصرية"
+          ],
+          "options": [
+            "writing",
+            "nile",
+            "trade",
+            "farming"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «نهر النيل»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الفراعنة» مش من السلسلة، مكانه «الزراعة»",
+            "نهر النيل ← الزراعة ← التجارة"
+          ],
+          "concepts": [
+            "nile",
+            "farming",
+            "trade"
+          ],
+          "target": "nile",
+          "chain": [
+            "nile",
+            "farming",
+            "trade"
+          ],
+          "wrong_index": 1,
+          "wrong": "pharaohs",
+          "options": [
+            "pyramids",
+            "writing",
+            "farming"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «الحياة حول النيل» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«الكتابة الهيروغليفية»: كتابة بالصور استعملها المصريون القدماء، فهي من «الفراعنة وآثارهم»، مش من «الحياة حول النيل».",
+            "أما «الحياة حول النيل»: نهر النيل، التجارة، الزراعة."
+          ],
+          "concepts": [
+            "nile",
+            "trade",
+            "farming"
+          ],
+          "target": "nile",
+          "family": [
+            "nile",
+            "trade",
+            "farming"
+          ],
+          "intruder": "writing",
+          "intros": {
+            "nile": "نهر عاشت حوله الحضارة المصرية",
+            "trade": "تبادل البضائع بين الناس والمدن",
+            "farming": "زراعة الأرض قرب النهر لإنتاج الطعام",
+            "writing": "كتابة بالصور استعملها المصريون القدماء"
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "farming",
+      "title": "الزراعة",
+      "difficulty": "",
+      "minutes": 0,
+      "questions": [
+        {
+          "template": "match",
+          "difficulty": "easy",
+          "question": "وصّل «الزراعة» وجيرانه بمعانيهم",
+          "how": "اسحب خط من كل مفهوم لمعناه (أو اكبس على المفهوم وبعدين على المعنى).",
+          "solution": [
+            "الزراعة: زراعة الأرض قرب النهر لإنتاج الطعام",
+            "نهر النيل: نهر عاشت حوله الحضارة المصرية؛ يسقي الأرض",
+            "التجارة: تبادل البضائع بين الناس والمدن"
+          ],
+          "concepts": [
+            "farming",
+            "nile",
+            "trade"
+          ],
+          "target": "farming",
+          "pairs": [
+            [
+              "farming",
+              "زراعة الأرض قرب النهر لإنتاج الطعام"
+            ],
+            [
+              "nile",
+              "نهر عاشت حوله الحضارة المصرية؛ يسقي الأرض"
+            ],
+            [
+              "trade",
+              "تبادل البضائع بين الناس والمدن"
+            ]
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الزراعة»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الفراعنة» مش من السلسلة، مكانه «التجارة»",
+            "نهر النيل ← الزراعة ← التجارة"
+          ],
+          "concepts": [
+            "farming",
+            "nile",
+            "trade"
+          ],
+          "target": "farming",
+          "chain": [
+            "nile",
+            "farming",
+            "trade"
+          ],
+          "wrong_index": 2,
+          "wrong": "pharaohs",
+          "options": [
+            "pyramids",
+            "trade",
+            "writing"
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «الزراعة»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "نهر النيل لازم قبل الزراعة"
+          ],
+          "concepts": [
+            "farming",
+            "nile"
+          ],
+          "target": "farming",
+          "correct": [
+            "nile"
+          ],
+          "options": [
+            "pyramids",
+            "nile",
+            "trade",
+            "writing"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «الحياة حول النيل» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«الكتابة الهيروغليفية»: كتابة بالصور استعملها المصريون القدماء، فهي من «الفراعنة وآثارهم»، مش من «الحياة حول النيل».",
+            "أما «الحياة حول النيل»: الزراعة، نهر النيل، التجارة."
+          ],
+          "concepts": [
+            "farming",
+            "nile",
+            "trade"
+          ],
+          "target": "farming",
+          "family": [
+            "farming",
+            "nile",
+            "trade"
+          ],
+          "intruder": "writing",
+          "intros": {
+            "farming": "زراعة الأرض قرب النهر لإنتاج الطعام",
+            "nile": "نهر عاشت حوله الحضارة المصرية",
+            "trade": "تبادل البضائع بين الناس والمدن",
+            "writing": "كتابة بالصور استعملها المصريون القدماء"
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "trade",
+      "title": "التجارة",
+      "difficulty": "",
+      "minutes": 0,
+      "questions": [
+        {
+          "template": "true_false",
+          "difficulty": "easy",
+          "question": "صح ولا غلط؟ عن «التجارة»",
+          "how": "طعمي كل جملة للوحش الصح: «صح» ولا «غلط» (اسحبها لتمّه أو اكبس عليه).",
+          "solution": [
+            "❌ «التجارة»: حكّام مصر القديمة ← هاد «الفراعنة» مش «التجارة»",
+            "❌ «التجارة»: نهر عاشت حوله الحضارة المصرية ← هاد «نهر النيل» مش «التجارة»",
+            "✅ «التجارة»: تبادل البضائع بين الناس والمدن",
+            "❌ «التجارة»: زراعة الأرض قرب النهر لإنتاج الطعام ← هاد «الزراعة» مش «التجارة»"
+          ],
+          "concepts": [
+            "trade"
+          ],
+          "target": "trade",
+          "statements": [
+            {
+              "text": "«التجارة»: حكّام مصر القديمة",
+              "answer": false
+            },
+            {
+              "text": "«التجارة»: نهر عاشت حوله الحضارة المصرية",
+              "answer": false
+            },
+            {
+              "text": "«التجارة»: تبادل البضائع بين الناس والمدن",
+              "answer": true
+            },
+            {
+              "text": "«التجارة»: زراعة الأرض قرب النهر لإنتاج الطعام",
+              "answer": false
+            }
+          ]
+        },
+        {
+          "template": "spell",
+          "difficulty": "easy",
+          "question": "ركّب اسم المفهوم",
+          "how": "اقرأ المعنى، واسحب الحروف لمكانها (أو اكبس عليها بالترتيب).",
+          "solution": [
+            "«تبادل البضائع بين الناس والمدن» = التجارة"
+          ],
+          "concepts": [
+            "trade"
+          ],
+          "target": "trade",
+          "word": "التجارة",
+          "clue": "تبادل البضائع بين الناس والمدن"
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «التجارة»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "الزراعة لازم قبل التجارة"
+          ],
+          "concepts": [
+            "trade",
+            "farming"
+          ],
+          "target": "trade",
+          "correct": [
+            "farming"
+          ],
+          "options": [
+            "writing",
+            "farming",
+            "pyramids",
+            "pharaohs"
+          ]
+        },
+        {
+          "template": "sequence",
+          "difficulty": "mid",
+          "question": "ابنِ جسر «التجارة»",
+          "how": "ركّب قطع الجسر بالترتيب من الأساس (اسحب أو اكبس)، وبعدين «🚗 يلا!» وخلّي البذرة تقطع.",
+          "solution": [
+            "نهر النيل قبل الزراعة",
+            "الزراعة قبل التجارة"
+          ],
+          "concepts": [
+            "trade",
+            "nile",
+            "farming"
+          ],
+          "target": "trade",
+          "order": [
+            "nile",
+            "farming",
+            "trade"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "prereq(nile): nothing comes before it",
+    "unlocks(nile): not enough wrong roads",
+    "sort(nile): needs concepts both before and after it",
+    "predict(nile): no unrelated concept to compare with",
+    "adjust(nile): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "sort(farming): needs concepts both before and after it",
+    "who_am_i(farming): the meaning is too short for 2+ clues",
+    "adjust(farming): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "unlocks(trade): nothing comes after it",
+    "sort(trade): needs concepts both before and after it",
+    "who_am_i(trade): the meaning is too short for 2+ clues",
+    "predict(trade): nothing needs it",
+    "adjust(trade): not a numeric subject (memorise/understand lessons do not get number sliders)"
+  ],
+  "art": {}
+}

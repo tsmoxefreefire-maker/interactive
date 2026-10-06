@@ -1,0 +1,100 @@
+{
+  "source_graph": "plants_book_graph.json",
+  "generated_on": "2026-10-06",
+  "lessons": [
+    {
+      "lesson_id": "l_cycle",
+      "title": "من البذرة إلى النبتة",
+      "unit_id": "u_plants",
+      "topic_id": "t_lifecycle",
+      "lesson_minutes": 15,
+      "questions": 12,
+      "concepts": {
+        "pollination": 4,
+        "germination": 4,
+        "seed_dispersal": 4
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "who_am_i(pollination): the meaning is too short for 2+ clues",
+        "adjust(pollination): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "unlocks(germination): nothing comes after it",
+        "sort(germination): needs concepts both before and after it",
+        "who_am_i(germination): the meaning is too short for 2+ clues",
+        "predict(germination): nothing needs it",
+        "adjust(germination): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "unlocks(seed_dispersal): nothing comes after it",
+        "sort(seed_dispersal): needs concepts both before and after it",
+        "who_am_i(seed_dispersal): the meaning is too short for 2+ clues",
+        "predict(seed_dispersal): nothing needs it",
+        "adjust(seed_dispersal): not a numeric subject (memorise/understand lessons do not get number sliders)"
+      ]
+    },
+    {
+      "lesson_id": "l_needs",
+      "title": "حاجات النبات",
+      "unit_id": "u_plants",
+      "topic_id": "t_structure",
+      "lesson_minutes": 12,
+      "questions": 16,
+      "concepts": {
+        "water": 4,
+        "sunlight": 4,
+        "air": 4,
+        "soil": 4
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "prereq(water): nothing comes before it",
+        "sort(water): needs concepts both before and after it",
+        "adjust(water): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "fix_chain(sunlight): needs a chain of 3+",
+        "prereq(sunlight): nothing comes before it",
+        "sort(sunlight): needs concepts both before and after it",
+        "adjust(sunlight): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "fix_chain(air): needs a chain of 3+",
+        "prereq(air): nothing comes before it",
+        "sort(air): needs concepts both before and after it",
+        "who_am_i(air): the meaning is too short for 2+ clues",
+        "adjust(air): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "prereq(soil): nothing comes before it",
+        "sort(soil): needs concepts both before and after it",
+        "adjust(soil): not a numeric subject (memorise/understand lessons do not get number sliders)"
+      ]
+    },
+    {
+      "lesson_id": "l_parts",
+      "title": "أجزاء النبات",
+      "unit_id": "u_plants",
+      "topic_id": "t_structure",
+      "lesson_minutes": 23,
+      "questions": 24,
+      "concepts": {
+        "flower": 4,
+        "root": 4,
+        "stem": 4,
+        "fruit": 4,
+        "leaf": 4,
+        "seed": 4
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "prereq(flower): nothing comes before it",
+        "sort(flower): needs concepts both before and after it",
+        "adjust(flower): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "adjust(root): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "adjust(stem): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "adjust(fruit): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "unlocks(leaf): nothing comes after it",
+        "sort(leaf): needs concepts both before and after it",
+        "who_am_i(leaf): the meaning is too short for 2+ clues",
+        "predict(leaf): nothing needs it",
+        "adjust(leaf): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "adjust(seed): not a numeric subject (memorise/understand lessons do not get number sliders)"
+      ]
+    }
+  ]
+}

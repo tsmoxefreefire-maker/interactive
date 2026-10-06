@@ -1,0 +1,525 @@
+{
+  "book": {
+    "id": "sci_g4",
+    "title": "العلوم · الصف الرابع",
+    "subject": "Science"
+  },
+  "nodes": [
+    {
+      "id": "u_plants",
+      "book_id": "sci_g4",
+      "title": "الوحدة الثانية: النباتات",
+      "learning_objective": "يتعرّف الطالب على النبات: أجزاءه وحاجاته ودورة حياته.",
+      "level": "unit"
+    },
+    {
+      "id": "t_structure",
+      "book_id": "sci_g4",
+      "title": "تركيب النبات وحاجاته",
+      "learning_objective": "يربط الطالب كل جزء من النبات بوظيفته وبحاجات النبات.",
+      "level": "topic"
+    },
+    {
+      "id": "t_lifecycle",
+      "book_id": "sci_g4",
+      "title": "دورة حياة النبات",
+      "learning_objective": "يرتّب الطالب مراحل حياة النبات من البذرة للبذرة.",
+      "level": "topic"
+    },
+    {
+      "id": "l_parts",
+      "book_id": "sci_g4",
+      "title": "أجزاء النبات",
+      "learning_objective": "يسمّي الطالب أجزاء النبات ويشرح وظيفة كل جزء.",
+      "level": "lesson"
+    },
+    {
+      "id": "l_needs",
+      "book_id": "sci_g4",
+      "title": "حاجات النبات",
+      "learning_objective": "يحدّد الطالب ما يحتاجه النبات ليعيش وينمو.",
+      "level": "lesson"
+    },
+    {
+      "id": "l_cycle",
+      "book_id": "sci_g4",
+      "title": "من البذرة إلى النبتة",
+      "learning_objective": "يرتّب الطالب مراحل نمو النبات وتكاثره.",
+      "level": "lesson"
+    },
+    {
+      "id": "root",
+      "book_id": "sci_g4",
+      "title": "الجذر",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "stem",
+      "book_id": "sci_g4",
+      "title": "الساق",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "leaf",
+      "book_id": "sci_g4",
+      "title": "الورقة",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "flower",
+      "book_id": "sci_g4",
+      "title": "الزهرة",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "fruit",
+      "book_id": "sci_g4",
+      "title": "الثمرة",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "seed",
+      "book_id": "sci_g4",
+      "title": "البذرة",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "water",
+      "book_id": "sci_g4",
+      "title": "الماء",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "sunlight",
+      "book_id": "sci_g4",
+      "title": "ضوء الشمس",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "air",
+      "book_id": "sci_g4",
+      "title": "الهواء",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "soil",
+      "book_id": "sci_g4",
+      "title": "التربة",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "germination",
+      "book_id": "sci_g4",
+      "title": "الإنبات",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "pollination",
+      "book_id": "sci_g4",
+      "title": "التلقيح",
+      "learning_objective": "",
+      "level": "entity"
+    },
+    {
+      "id": "seed_dispersal",
+      "book_id": "sci_g4",
+      "title": "انتشار البذور",
+      "learning_objective": "",
+      "level": "entity"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "r1",
+      "source_node_id": "t_structure",
+      "target_node_id": "u_plants",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r2",
+      "source_node_id": "t_lifecycle",
+      "target_node_id": "u_plants",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r3",
+      "source_node_id": "l_parts",
+      "target_node_id": "t_structure",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r4",
+      "source_node_id": "l_needs",
+      "target_node_id": "t_structure",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r5",
+      "source_node_id": "l_cycle",
+      "target_node_id": "t_lifecycle",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r6",
+      "source_node_id": "root",
+      "target_node_id": "l_parts",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r7",
+      "source_node_id": "stem",
+      "target_node_id": "l_parts",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r8",
+      "source_node_id": "leaf",
+      "target_node_id": "l_parts",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r9",
+      "source_node_id": "flower",
+      "target_node_id": "l_parts",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r10",
+      "source_node_id": "fruit",
+      "target_node_id": "l_parts",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r11",
+      "source_node_id": "seed",
+      "target_node_id": "l_parts",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r12",
+      "source_node_id": "water",
+      "target_node_id": "l_needs",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r13",
+      "source_node_id": "sunlight",
+      "target_node_id": "l_needs",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r14",
+      "source_node_id": "air",
+      "target_node_id": "l_needs",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r15",
+      "source_node_id": "soil",
+      "target_node_id": "l_needs",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r16",
+      "source_node_id": "germination",
+      "target_node_id": "l_cycle",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r17",
+      "source_node_id": "pollination",
+      "target_node_id": "l_cycle",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r18",
+      "source_node_id": "seed_dispersal",
+      "target_node_id": "l_cycle",
+      "type": "subsetOf",
+      "weight": 1.0
+    },
+    {
+      "id": "r19",
+      "source_node_id": "soil",
+      "target_node_id": "root",
+      "type": "prerequisiteOf",
+      "weight": 0.6
+    },
+    {
+      "id": "r20",
+      "source_node_id": "root",
+      "target_node_id": "stem",
+      "type": "prerequisiteOf",
+      "weight": 0.9
+    },
+    {
+      "id": "r21",
+      "source_node_id": "stem",
+      "target_node_id": "leaf",
+      "type": "prerequisiteOf",
+      "weight": 0.9
+    },
+    {
+      "id": "r22",
+      "source_node_id": "water",
+      "target_node_id": "root",
+      "type": "prerequisiteOf",
+      "weight": 0.7
+    },
+    {
+      "id": "r23",
+      "source_node_id": "sunlight",
+      "target_node_id": "leaf",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "id": "r24",
+      "source_node_id": "air",
+      "target_node_id": "leaf",
+      "type": "prerequisiteOf",
+      "weight": 0.5
+    },
+    {
+      "id": "r25",
+      "source_node_id": "flower",
+      "target_node_id": "pollination",
+      "type": "prerequisiteOf",
+      "weight": 0.9
+    },
+    {
+      "id": "r26",
+      "source_node_id": "pollination",
+      "target_node_id": "fruit",
+      "type": "prerequisiteOf",
+      "weight": 0.9
+    },
+    {
+      "id": "r27",
+      "source_node_id": "fruit",
+      "target_node_id": "seed",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "id": "r28",
+      "source_node_id": "seed",
+      "target_node_id": "germination",
+      "type": "prerequisiteOf",
+      "weight": 0.9
+    },
+    {
+      "id": "r29",
+      "source_node_id": "seed",
+      "target_node_id": "seed_dispersal",
+      "type": "prerequisiteOf",
+      "weight": 0.7
+    }
+  ],
+  "node_metadata": [
+    {
+      "node_id": "root",
+      "difficulty": "easy",
+      "estimated_minutes": 4,
+      "importance": 0.9
+    },
+    {
+      "node_id": "stem",
+      "difficulty": "easy",
+      "estimated_minutes": 4,
+      "importance": 0.8
+    },
+    {
+      "node_id": "leaf",
+      "difficulty": "medium",
+      "estimated_minutes": 5,
+      "importance": 0.9
+    },
+    {
+      "node_id": "flower",
+      "difficulty": "medium",
+      "estimated_minutes": 4,
+      "importance": 0.7
+    },
+    {
+      "node_id": "fruit",
+      "difficulty": "easy",
+      "estimated_minutes": 3,
+      "importance": 0.6
+    },
+    {
+      "node_id": "seed",
+      "difficulty": "easy",
+      "estimated_minutes": 3,
+      "importance": 0.7
+    },
+    {
+      "node_id": "water",
+      "difficulty": "easy",
+      "estimated_minutes": 3,
+      "importance": 0.9
+    },
+    {
+      "node_id": "sunlight",
+      "difficulty": "easy",
+      "estimated_minutes": 3,
+      "importance": 0.9
+    },
+    {
+      "node_id": "air",
+      "difficulty": "medium",
+      "estimated_minutes": 3,
+      "importance": 0.6
+    },
+    {
+      "node_id": "soil",
+      "difficulty": "easy",
+      "estimated_minutes": 3,
+      "importance": 0.6
+    },
+    {
+      "node_id": "germination",
+      "difficulty": "medium",
+      "estimated_minutes": 5,
+      "importance": 0.8
+    },
+    {
+      "node_id": "pollination",
+      "difficulty": "hard",
+      "estimated_minutes": 6,
+      "importance": 0.8
+    },
+    {
+      "node_id": "seed_dispersal",
+      "difficulty": "medium",
+      "estimated_minutes": 4,
+      "importance": 0.6
+    },
+    {
+      "node_id": "l_parts",
+      "difficulty": null,
+      "estimated_minutes": 23,
+      "importance": null
+    },
+    {
+      "node_id": "l_needs",
+      "difficulty": null,
+      "estimated_minutes": 12,
+      "importance": null
+    },
+    {
+      "node_id": "l_cycle",
+      "difficulty": null,
+      "estimated_minutes": 15,
+      "importance": null
+    }
+  ],
+  "node_content": [
+    {
+      "node_id": "root",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "الجزء تحت الأرض؛ يثبّت النبتة ويمتص الماء والأملاح من التربة."
+    },
+    {
+      "node_id": "stem",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "يحمل النبتة وينقل الماء من الجذر إلى الأوراق والغذاء من الأوراق لباقي النبتة."
+    },
+    {
+      "node_id": "leaf",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء."
+    },
+    {
+      "node_id": "flower",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "جزء مسؤول عن التكاثر، ويتحوّل إلى ثمرة بعد التلقيح."
+    },
+    {
+      "node_id": "fruit",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "تنمو من الزهرة وتحمي البذور التي بداخلها."
+    },
+    {
+      "node_id": "seed",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "توجد داخل الثمرة، ويمكن أن تنمو لتصبح نبتة جديدة."
+    },
+    {
+      "node_id": "water",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه."
+    },
+    {
+      "node_id": "sunlight",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "تستخدمه الورقة لصنع الغذاء؛ بدونه يضعف النبات ويصفرّ."
+    },
+    {
+      "node_id": "air",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "يأخذ النبات منه غازاً يحتاجه لصنع الغذاء."
+    },
+    {
+      "node_id": "soil",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "تثبّت الجذر وتعطيه الماء والأملاح."
+    },
+    {
+      "node_id": "germination",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران."
+    },
+    {
+      "node_id": "pollination",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح."
+    },
+    {
+      "node_id": "seed_dispersal",
+      "content_type": "text",
+      "content_url": null,
+      "content_text": "انتقال البذور بعيداً عن النبتة الأم بالرياح أو الحيوانات أو الماء."
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "book_id": "b",
+  "unit_id": "u",
+  "topic_id": "t",
+  "lesson_id": "l1",
+  "lesson_title": "الفراعنة وآثارهم",
+  "lesson_minutes": 0,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "default",
+  "icons": {
+    "pharaohs": "subj:📜:فراعنة",
+    "pyramids": "subj:📜:أهرامات",
+    "writing": "💧",
+    "nile": "🌍",
+    "farming": "🌍",
+    "trade": "subj:📜:تجارة"
+  },
+  "coverage": {
+    "concepts": 3,
+    "ready": 3,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 12,
+  "concepts": [
+    {
+      "concept_id": "pharaohs",
+      "title": "الفراعنة",
+      "difficulty": "",
+      "minutes": 0,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «الفراعنة»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "الفراعنة: حكّام مصر القديمة؛ بنوا الأهرامات"
+          ],
+          "concepts": [
+            "pharaohs"
+          ],
+          "target": "pharaohs",
+          "options": [
+            "كتابة بالصور استعملها المصريون القدماء",
+            "مقابر ضخمة بُنيت للفراعنة من الحجارة",
+            "حكّام مصر القديمة؛ بنوا الأهرامات",
+            "زراعة الأرض قرب النهر لإنتاج الطعام"
+          ],
+          "answer": "حكّام مصر القديمة؛ بنوا الأهرامات"
+        },
+        {
+          "template": "predict",
+          "difficulty": "mid",
+          "question": "شو بيصير لو اختفى «الفراعنة»؟",
+          "how": "توقّع أول، وبعدين شوف شو بيصير للباقين.",
+          "solution": [
+            "«الأهرامات» بيحتاج «الفراعنة»",
+            "«التجارة» ما بتحتاج «الفراعنة»، فما بتتأثر."
+          ],
+          "concepts": [
+            "pharaohs",
+            "pyramids"
+          ],
+          "target": "pharaohs",
+          "options": [
+            "«الأهرامات» بيصير أقوى",
+            "ما في إشي بيتأثر، كل واحد لحاله",
+            "بس «التجارة» بتتأثر",
+            "«الأهرامات» بيتأثروا، لأنه كل واحد بيحتاج اللي قبله"
+          ],
+          "answer": 3,
+          "affected": [
+            "pyramids"
+          ],
+          "unaffected": [
+            "trade"
+          ]
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «الفراعنة وآثارهم». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الفراعنة»: حكّام مصر القديمة؛ بنوا الأهرامات"
+          ],
+          "concepts": [
+            "pharaohs"
+          ],
+          "target": "pharaohs",
+          "clues": [
+            "بنوا الأهرامات",
+            "حكّام مصر القديمة"
+          ],
+          "options": [
+            "writing",
+            "pharaohs",
+            "pyramids",
+            "trade"
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «الفراعنة»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «الفراعنة»: نهر النيل",
+            "بعد «الفراعنة»: الأهرامات، الكتابة الهيروغليفية"
+          ],
+          "concepts": [
+            "pharaohs",
+            "nile",
+            "pyramids",
+            "writing"
+          ],
+          "target": "pharaohs",
+          "before": [
+            "nile"
+          ],
+          "after": [
+            "pyramids",
+            "writing"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "pyramids",
+      "title": "الأهرامات",
+      "difficulty": "",
+      "minutes": 0,
+      "questions": [
+        {
+          "template": "match",
+          "difficulty": "easy",
+          "question": "وصّل «الأهرامات» وجيرانه بمعانيهم",
+          "how": "اسحب خط من كل مفهوم لمعناه (أو اكبس على المفهوم وبعدين على المعنى).",
+          "solution": [
+            "الأهرامات: مقابر ضخمة بُنيت للفراعنة من الحجارة",
+            "الفراعنة: حكّام مصر القديمة؛ بنوا الأهرامات",
+            "الكتابة الهيروغليفية: كتابة بالصور استعملها المصريون القدماء"
+          ],
+          "concepts": [
+            "pyramids",
+            "pharaohs",
+            "writing"
+          ],
+          "target": "pyramids",
+          "pairs": [
+            [
+              "pyramids",
+              "مقابر ضخمة بُنيت للفراعنة من الحجارة"
+            ],
+            [
+              "pharaohs",
+              "حكّام مصر القديمة؛ بنوا الأهرامات"
+            ],
+            [
+              "writing",
+              "كتابة بالصور استعملها المصريون القدماء"
+            ]
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الأهرامات»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الكتابة الهيروغليفية» مش من السلسلة، مكانه «الفراعنة»",
+            "نهر النيل ← الفراعنة ← الأهرامات"
+          ],
+          "concepts": [
+            "pyramids",
+            "nile",
+            "pharaohs"
+          ],
+          "target": "pyramids",
+          "chain": [
+            "nile",
+            "pharaohs",
+            "pyramids"
+          ],
+          "wrong_index": 1,
+          "wrong": "writing",
+          "options": [
+            "trade",
+            "pharaohs",
+            "farming"
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «الأهرامات»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "الفراعنة لازم قبل الأهرامات"
+          ],
+          "concepts": [
+            "pyramids",
+            "pharaohs"
+          ],
+          "target": "pyramids",
+          "correct": [
+            "pharaohs"
+          ],
+          "options": [
+            "writing",
+            "trade",
+            "pharaohs",
+            "farming"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «الفراعنة وآثارهم» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«الزراعة»: زراعة الأرض قرب النهر لإنتاج الطعام، فهي من «الحياة حول النيل»، مش من «الفراعنة وآثارهم».",
+            "أما «الفراعنة وآثارهم»: الأهرامات، الكتابة الهيروغليفية، الفراعنة."
+          ],
+          "concepts": [
+            "pyramids",
+            "writing",
+            "pharaohs"
+          ],
+          "target": "pyramids",
+          "family": [
+            "pyramids",
+            "writing",
+            "pharaohs"
+          ],
+          "intruder": "farming",
+          "intros": {
+            "pyramids": "مقابر ضخمة بُنيت للفراعنة من الحجارة",
+            "writing": "كتابة بالصور استعملها المصريون القدماء",
+            "pharaohs": "حكّام مصر القديمة",
+            "farming": "زراعة الأرض قرب النهر لإنتاج الطعام"
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "writing",
+      "title": "الكتابة الهيروغليفية",
+      "difficulty": "",
+      "minutes": 0,
+      "questions": [
+        {
+          "template": "true_false",
+          "difficulty": "easy",
+          "question": "صح ولا غلط؟ عن «الكتابة الهيروغليفية»",
+          "how": "طعمي كل جملة للوحش الصح: «صح» ولا «غلط» (اسحبها لتمّه أو اكبس عليه).",
+          "solution": [
+            "❌ «الكتابة الهيروغليفية»: حكّام مصر القديمة ← هاد «الفراعنة» مش «الكتابة الهيروغليفية»",
+            "❌ «الكتابة الهيروغليفية»: زراعة الأرض قرب النهر لإنتاج الطعام ← هاد «الزراعة» مش «الكتابة الهيروغليفية»",
+            "✅ «الكتابة الهيروغليفية»: كتابة بالصور استعملها المصريون القدماء",
+            "❌ «الكتابة الهيروغليفية»: مقابر ضخمة بُنيت للفراعنة من الحجارة ← هاد «الأهرامات» مش «الكتابة الهيروغليفية»"
+          ],
+          "concepts": [
+            "writing"
+          ],
+          "target": "writing",
+          "statements": [
+            {
+              "text": "«الكتابة الهيروغليفية»: حكّام مصر القديمة",
+              "answer": false
+            },
+            {
+              "text": "«الكتابة الهيروغليفية»: زراعة الأرض قرب النهر لإنتاج الطعام",
+              "answer": false
+            },
+            {
+              "text": "«الكتابة الهيروغليفية»: كتابة بالصور استعملها المصريون القدماء",
+              "answer": true
+            },
+            {
+              "text": "«الكتابة الهيروغليفية»: مقابر ضخمة بُنيت للفراعنة من الحجارة",
+              "answer": false
+            }
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الكتابة الهيروغليفية»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الأهرامات» مش من السلسلة، مكانه «نهر النيل»",
+            "نهر النيل ← الفراعنة ← الكتابة الهيروغليفية"
+          ],
+          "concepts": [
+            "writing",
+            "nile",
+            "pharaohs"
+          ],
+          "target": "writing",
+          "chain": [
+            "nile",
+            "pharaohs",
+            "writing"
+          ],
+          "wrong_index": 0,
+          "wrong": "pyramids",
+          "options": [
+            "nile",
+            "trade",
+            "farming"
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «الكتابة الهيروغليفية»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "الفراعنة لازم قبل الكتابة الهيروغليفية"
+          ],
+          "concepts": [
+            "writing",
+            "pharaohs"
+          ],
+          "target": "writing",
+          "correct": [
+            "pharaohs"
+          ],
+          "options": [
+            "trade",
+            "farming",
+            "pharaohs",
+            "pyramids"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «الفراعنة وآثارهم» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«التجارة»: تبادل البضائع بين الناس والمدن، فهي من «الحياة حول النيل»، مش من «الفراعنة وآثارهم».",
+            "أما «الفراعنة وآثارهم»: الكتابة الهيروغليفية، الفراعنة، الأهرامات."
+          ],
+          "concepts": [
+            "writing",
+            "pharaohs",
+            "pyramids"
+          ],
+          "target": "writing",
+          "family": [
+            "writing",
+            "pharaohs",
+            "pyramids"
+          ],
+          "intruder": "trade",
+          "intros": {
+            "writing": "كتابة بالصور استعملها المصريون القدماء",
+            "pharaohs": "حكّام مصر القديمة",
+            "pyramids": "مقابر ضخمة بُنيت للفراعنة من الحجارة",
+            "trade": "تبادل البضائع بين الناس والمدن"
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "adjust(pharaohs): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "unlocks(pyramids): nothing comes after it",
+    "sort(pyramids): needs concepts both before and after it",
+    "who_am_i(pyramids): the meaning is too short for 2+ clues",
+    "predict(pyramids): nothing needs it",
+    "adjust(pyramids): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "spell(writing): no meaning or the name is too short/long",
+    "unlocks(writing): nothing comes after it",
+    "sort(writing): needs concepts both before and after it",
+    "who_am_i(writing): the meaning is too short for 2+ clues",
+    "predict(writing): nothing needs it",
+    "adjust(writing): not a numeric subject (memorise/understand lessons do not get number sliders)"
+  ],
+  "art": {}
+}

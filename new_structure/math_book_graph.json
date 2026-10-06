@@ -1,0 +1,421 @@
+{
+  "book": {
+    "id": "b_math",
+    "title": "الرياضيات · الصف الرابع",
+    "subject": "Mathematics",
+    "grade": "4"
+  },
+  "nodes": [
+    {
+      "id": "b_math",
+      "title": "الرياضيات · الصف الرابع",
+      "level": "book"
+    },
+    {
+      "id": "u_num",
+      "title": "الوحدة الأولى: الأعداد والعمليات",
+      "level": "unit"
+    },
+    {
+      "id": "t_ops",
+      "title": "العمليات الأربع",
+      "level": "topic"
+    },
+    {
+      "id": "t_frac",
+      "title": "الكسور",
+      "level": "topic"
+    },
+    {
+      "id": "l_addsub",
+      "title": "الجمع والطرح",
+      "level": "lesson"
+    },
+    {
+      "id": "l_muldiv",
+      "title": "الضرب والقسمة",
+      "level": "lesson"
+    },
+    {
+      "id": "l_frac",
+      "title": "مدخل إلى الكسور",
+      "level": "lesson"
+    },
+    {
+      "id": "l_eqfrac",
+      "title": "الكسور المتكافئة والمقارنة",
+      "level": "lesson"
+    },
+    {
+      "id": "numbers",
+      "title": "الأعداد",
+      "level": "entity"
+    },
+    {
+      "id": "addition",
+      "title": "الجمع",
+      "level": "entity"
+    },
+    {
+      "id": "subtraction",
+      "title": "الطرح",
+      "level": "entity"
+    },
+    {
+      "id": "multiplication",
+      "title": "الضرب",
+      "level": "entity"
+    },
+    {
+      "id": "division",
+      "title": "القسمة",
+      "level": "entity"
+    },
+    {
+      "id": "fraction",
+      "title": "الكسر",
+      "level": "entity"
+    },
+    {
+      "id": "numerator",
+      "title": "البسط",
+      "level": "entity"
+    },
+    {
+      "id": "denominator",
+      "title": "المقام",
+      "level": "entity"
+    },
+    {
+      "id": "equivalent",
+      "title": "الكسور المتكافئة",
+      "level": "entity"
+    },
+    {
+      "id": "compare",
+      "title": "مقارنة الكسور",
+      "level": "entity"
+    }
+  ],
+  "relationships": [
+    {
+      "source_node_id": "u_num",
+      "target_node_id": "b_math",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "t_ops",
+      "target_node_id": "u_num",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "t_frac",
+      "target_node_id": "u_num",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "l_addsub",
+      "target_node_id": "t_ops",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "l_muldiv",
+      "target_node_id": "t_ops",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "l_frac",
+      "target_node_id": "t_frac",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "l_eqfrac",
+      "target_node_id": "t_frac",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "numbers",
+      "target_node_id": "l_addsub",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "addition",
+      "target_node_id": "l_addsub",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "subtraction",
+      "target_node_id": "l_addsub",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "multiplication",
+      "target_node_id": "l_muldiv",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "division",
+      "target_node_id": "l_muldiv",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "fraction",
+      "target_node_id": "l_frac",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "numerator",
+      "target_node_id": "l_frac",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "denominator",
+      "target_node_id": "l_frac",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "equivalent",
+      "target_node_id": "l_eqfrac",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "compare",
+      "target_node_id": "l_eqfrac",
+      "type": "subsetOf"
+    },
+    {
+      "source_node_id": "numbers",
+      "target_node_id": "addition",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "addition",
+      "target_node_id": "subtraction",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "addition",
+      "target_node_id": "multiplication",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "multiplication",
+      "target_node_id": "division",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "subtraction",
+      "target_node_id": "division",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "division",
+      "target_node_id": "fraction",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "fraction",
+      "target_node_id": "numerator",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "fraction",
+      "target_node_id": "denominator",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "numerator",
+      "target_node_id": "equivalent",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "denominator",
+      "target_node_id": "equivalent",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "multiplication",
+      "target_node_id": "equivalent",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    },
+    {
+      "source_node_id": "equivalent",
+      "target_node_id": "compare",
+      "type": "prerequisiteOf",
+      "weight": 0.8
+    }
+  ],
+  "node_metadata": [
+    {
+      "node_id": "numbers",
+      "difficulty": 1,
+      "estimated_minutes": 6,
+      "importance": 0.9
+    },
+    {
+      "node_id": "addition",
+      "difficulty": 1,
+      "estimated_minutes": 8,
+      "importance": 0.9
+    },
+    {
+      "node_id": "subtraction",
+      "difficulty": 2,
+      "estimated_minutes": 8,
+      "importance": 0.8
+    },
+    {
+      "node_id": "multiplication",
+      "difficulty": 2,
+      "estimated_minutes": 10,
+      "importance": 0.9
+    },
+    {
+      "node_id": "division",
+      "difficulty": 3,
+      "estimated_minutes": 10,
+      "importance": 0.8
+    },
+    {
+      "node_id": "fraction",
+      "difficulty": 2,
+      "estimated_minutes": 8,
+      "importance": 0.9
+    },
+    {
+      "node_id": "numerator",
+      "difficulty": 2,
+      "estimated_minutes": 5,
+      "importance": 0.7
+    },
+    {
+      "node_id": "denominator",
+      "difficulty": 2,
+      "estimated_minutes": 5,
+      "importance": 0.7
+    },
+    {
+      "node_id": "equivalent",
+      "difficulty": 3,
+      "estimated_minutes": 9,
+      "importance": 0.8
+    },
+    {
+      "node_id": "compare",
+      "difficulty": 3,
+      "estimated_minutes": 8,
+      "importance": 0.8
+    }
+  ],
+  "node_content": [
+    {
+      "node_id": "numbers",
+      "content_type": "text",
+      "content_text": "رموز نعدّ بها الأشياء؛ تتكوّن من آحاد وعشرات ومئات",
+      "content_url": null
+    },
+    {
+      "node_id": "addition",
+      "content_type": "text",
+      "content_text": "ضمّ عددين أو أكثر معاً؛ ينتج عنه المجموع",
+      "content_url": null
+    },
+    {
+      "node_id": "subtraction",
+      "content_type": "text",
+      "content_text": "أخذ عدد من عدد آخر؛ ينتج عنه الفرق",
+      "content_url": null
+    },
+    {
+      "node_id": "multiplication",
+      "content_type": "text",
+      "content_text": "جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب",
+      "content_url": null
+    },
+    {
+      "node_id": "division",
+      "content_type": "text",
+      "content_text": "توزيع عدد على مجموعات متساوية؛ ينتج عنه ناتج القسمة",
+      "content_url": null
+    },
+    {
+      "node_id": "fraction",
+      "content_type": "text",
+      "content_text": "جزء من كلّ مقسوم إلى أجزاء متساوية؛ يُكتب بسطاً فوق مقام",
+      "content_url": null
+    },
+    {
+      "node_id": "numerator",
+      "content_type": "text",
+      "content_text": "العدد فوق خط الكسر؛ يدلّ على عدد الأجزاء المأخوذة",
+      "content_url": null
+    },
+    {
+      "node_id": "denominator",
+      "content_type": "text",
+      "content_text": "العدد تحت خط الكسر؛ يدلّ على عدد الأجزاء المتساوية للكلّ",
+      "content_url": null
+    },
+    {
+      "node_id": "equivalent",
+      "content_type": "text",
+      "content_text": "كسور مختلفة الشكل لها نفس القيمة؛ نحصل عليها بضرب البسط والمقام في نفس العدد",
+      "content_url": null
+    },
+    {
+      "node_id": "compare",
+      "content_type": "text",
+      "content_text": "معرفة أيّ الكسرين أكبر؛ نوحّد المقامات ثم نقارن البسوط",
+      "content_url": null
+    }
+  ],
+  "node_quantities": [
+    {
+      "node_id": "addition",
+      "label": "ناتج ٣ + ٤",
+      "unit": "",
+      "min": 0,
+      "max": 12,
+      "start": 0,
+      "ok_min": 7,
+      "ok_max": 7,
+      "low": "قليل… عدّ ٣ وبعدين ٤ كمان.",
+      "high": "كثير… ٣ + ٤ أقل من هيك."
+    },
+    {
+      "node_id": "multiplication",
+      "label": "ناتج ٣ × ٤",
+      "unit": "",
+      "min": 0,
+      "max": 20,
+      "start": 0,
+      "ok_min": 12,
+      "ok_max": 12,
+      "low": "قليل… ٣ × ٤ يعني ٤ + ٤ + ٤.",
+      "high": "كثير… ٣ × ٤ أقل من هيك."
+    },
+    {
+      "node_id": "numerator",
+      "label": "البسط في كسر «٣ من ٨ قطع بيتزا»",
+      "unit": "",
+      "min": 0,
+      "max": 8,
+      "start": 0,
+      "ok_min": 3,
+      "ok_max": 3,
+      "low": "قليل… كم قطعة أخذنا؟",
+      "high": "كثير… البسط عدد القطع المأخوذة بس."
+    }
+  ]
+}

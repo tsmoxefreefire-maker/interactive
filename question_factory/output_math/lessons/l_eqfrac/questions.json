@@ -1,0 +1,233 @@
+{
+  "book_id": "b_math",
+  "unit_id": "u_num",
+  "topic_id": "t_frac",
+  "lesson_id": "l_eqfrac",
+  "lesson_title": "الكسور المتكافئة والمقارنة",
+  "lesson_minutes": 17,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "default",
+  "icons": {
+    "numbers": "🔢",
+    "addition": "➕",
+    "subtraction": "➖",
+    "multiplication": "✖️",
+    "division": "➗",
+    "fraction": "🍕",
+    "numerator": "🔼",
+    "denominator": "🔽",
+    "equivalent": "🟰",
+    "compare": "⚖️"
+  },
+  "coverage": {
+    "concepts": 2,
+    "ready": 2,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 7,
+  "concepts": [
+    {
+      "concept_id": "equivalent",
+      "title": "الكسور المتكافئة",
+      "difficulty": 3,
+      "minutes": 9,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «الكسور المتكافئة»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "الكسور المتكافئة: كسور مختلفة الشكل لها نفس القيمة؛ نحصل عليها بضرب البسط والمقام في نفس العدد"
+          ],
+          "concepts": [
+            "equivalent"
+          ],
+          "target": "equivalent",
+          "options": [
+            "جزء من كلّ مقسوم إلى أجزاء متساوية؛ يُكتب بسطاً فوق مقام",
+            "العدد تحت خط الكسر؛ يدلّ على عدد الأجزاء المتساوية للكلّ",
+            "معرفة أيّ الكسرين أكبر؛ نوحّد المقامات ثم نقارن البسوط",
+            "كسور مختلفة الشكل لها نفس القيمة؛ نحصل عليها بضرب البسط والمقام في نفس العدد"
+          ],
+          "answer": "كسور مختلفة الشكل لها نفس القيمة؛ نحصل عليها بضرب البسط والمقام في نفس العدد"
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «الكسور المتكافئة والمقارنة». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الكسور المتكافئة»: كسور مختلفة الشكل لها نفس القيمة؛ نحصل عليها بضرب البسط والمقام في نفس العدد"
+          ],
+          "concepts": [
+            "equivalent"
+          ],
+          "target": "equivalent",
+          "clues": [
+            "نحصل عليها بضرب البسط والمقام في نفس العدد",
+            "كسور مختلفة الشكل لها نفس القيمة"
+          ],
+          "options": [
+            "denominator",
+            "numerator",
+            "compare",
+            "equivalent"
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «الكسور المتكافئة»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «الكسور المتكافئة»: المقام، الضرب، البسط",
+            "بعد «الكسور المتكافئة»: مقارنة الكسور"
+          ],
+          "concepts": [
+            "equivalent",
+            "denominator",
+            "multiplication",
+            "numerator",
+            "compare"
+          ],
+          "target": "equivalent",
+          "before": [
+            "denominator",
+            "multiplication",
+            "numerator"
+          ],
+          "after": [
+            "compare"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الكسور المتكافئة»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الكسر» مش من السلسلة، مكانه «المقام»",
+            "المقام ← الكسور المتكافئة ← مقارنة الكسور"
+          ],
+          "concepts": [
+            "equivalent",
+            "denominator",
+            "compare"
+          ],
+          "target": "equivalent",
+          "chain": [
+            "denominator",
+            "equivalent",
+            "compare"
+          ],
+          "wrong_index": 0,
+          "wrong": "fraction",
+          "options": [
+            "denominator",
+            "numerator",
+            "addition"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "compare",
+      "title": "مقارنة الكسور",
+      "difficulty": 3,
+      "minutes": 8,
+      "questions": [
+        {
+          "template": "true_false",
+          "difficulty": "easy",
+          "question": "صح ولا غلط؟ عن «مقارنة الكسور»",
+          "how": "طعمي كل جملة للوحش الصح: «صح» ولا «غلط» (اسحبها لتمّه أو اكبس عليه).",
+          "solution": [
+            "❌ «مقارنة الكسور»: كسور مختلفة الشكل لها نفس القيمة ← هاد «الكسور المتكافئة» مش «مقارنة الكسور»",
+            "❌ «مقارنة الكسور»: العدد فوق خط الكسر ← هاد «البسط» مش «مقارنة الكسور»",
+            "✅ «مقارنة الكسور»: معرفة أيّ الكسرين أكبر",
+            "✅ «مقارنة الكسور»: نوحّد المقامات ثم نقارن البسوط"
+          ],
+          "concepts": [
+            "compare"
+          ],
+          "target": "compare",
+          "statements": [
+            {
+              "text": "«مقارنة الكسور»: كسور مختلفة الشكل لها نفس القيمة",
+              "answer": false
+            },
+            {
+              "text": "«مقارنة الكسور»: العدد فوق خط الكسر",
+              "answer": false
+            },
+            {
+              "text": "«مقارنة الكسور»: معرفة أيّ الكسرين أكبر",
+              "answer": true
+            },
+            {
+              "text": "«مقارنة الكسور»: نوحّد المقامات ثم نقارن البسوط",
+              "answer": true
+            }
+          ]
+        },
+        {
+          "template": "spell",
+          "difficulty": "easy",
+          "question": "ركّب اسم المفهوم",
+          "how": "اقرأ المعنى، واسحب الحروف لمكانها (أو اكبس عليها بالترتيب).",
+          "solution": [
+            "«معرفة أيّ الكسرين أكبر؛ نوحّد المقامات ثم نقارن البسوط» = مقارنة الكسور"
+          ],
+          "concepts": [
+            "compare"
+          ],
+          "target": "compare",
+          "word": "مقارنة الكسور",
+          "clue": "معرفة أيّ الكسرين أكبر؛ نوحّد المقامات ثم نقارن البسوط"
+        },
+        {
+          "template": "sequence",
+          "difficulty": "mid",
+          "question": "ابنِ جسر «مقارنة الكسور»",
+          "how": "ركّب قطع الجسر بالترتيب من الأساس (اسحب أو اكبس)، وبعدين «🚗 يلا!» وخلّي البذرة تقطع.",
+          "solution": [
+            "المقام قبل الكسور المتكافئة",
+            "الكسور المتكافئة قبل مقارنة الكسور"
+          ],
+          "concepts": [
+            "compare",
+            "denominator",
+            "equivalent"
+          ],
+          "target": "compare",
+          "order": [
+            "denominator",
+            "equivalent",
+            "compare"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "spell(equivalent): no meaning or the name is too short/long",
+    "prereq(equivalent): not enough wrong options",
+    "unlocks(equivalent): not enough wrong roads",
+    "odd_one_out(equivalent): the lesson is too small or the book has no other lesson",
+    "predict(equivalent): no unrelated concept to compare with",
+    "adjust(equivalent): no numbers in the graph for this concept",
+    "match(compare): not enough neighbours with meanings",
+    "memory(compare): not enough neighbours with meanings",
+    "prereq(compare): not enough wrong options",
+    "unlocks(compare): nothing comes after it",
+    "sort(compare): needs concepts both before and after it",
+    "odd_one_out(compare): the lesson is too small or the book has no other lesson",
+    "predict(compare): nothing needs it",
+    "adjust(compare): no numbers in the graph for this concept"
+  ],
+  "art": {}
+}

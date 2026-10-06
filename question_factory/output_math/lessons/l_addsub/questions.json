@@ -1,0 +1,388 @@
+{
+  "book_id": "b_math",
+  "unit_id": "u_num",
+  "topic_id": "t_ops",
+  "lesson_id": "l_addsub",
+  "lesson_title": "الجمع والطرح",
+  "lesson_minutes": 22,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "default",
+  "icons": {
+    "numbers": "🔢",
+    "addition": "➕",
+    "subtraction": "➖",
+    "multiplication": "✖️",
+    "division": "➗",
+    "fraction": "🍕",
+    "numerator": "🔼",
+    "denominator": "🔽",
+    "equivalent": "🟰",
+    "compare": "⚖️"
+  },
+  "coverage": {
+    "concepts": 3,
+    "ready": 3,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 12,
+  "concepts": [
+    {
+      "concept_id": "numbers",
+      "title": "الأعداد",
+      "difficulty": 1,
+      "minutes": 6,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «الأعداد»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "الأعداد: رموز نعدّ بها الأشياء؛ تتكوّن من آحاد وعشرات ومئات"
+          ],
+          "concepts": [
+            "numbers"
+          ],
+          "target": "numbers",
+          "options": [
+            "أخذ عدد من عدد آخر؛ ينتج عنه الفرق",
+            "توزيع عدد على مجموعات متساوية؛ ينتج عنه ناتج القسمة",
+            "ضمّ عددين أو أكثر معاً؛ ينتج عنه المجموع",
+            "رموز نعدّ بها الأشياء؛ تتكوّن من آحاد وعشرات ومئات"
+          ],
+          "answer": "رموز نعدّ بها الأشياء؛ تتكوّن من آحاد وعشرات ومئات"
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «الجمع والطرح». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الأعداد»: رموز نعدّ بها الأشياء؛ تتكوّن من آحاد وعشرات ومئات"
+          ],
+          "concepts": [
+            "numbers"
+          ],
+          "target": "numbers",
+          "clues": [
+            "تتكوّن من آحاد وعشرات ومئات",
+            "رموز نعدّ بها الأشياء"
+          ],
+          "options": [
+            "division",
+            "subtraction",
+            "addition",
+            "numbers"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الأعداد»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الطرح» مش من السلسلة، مكانه «الجمع»",
+            "الأعداد ← الجمع ← الضرب"
+          ],
+          "concepts": [
+            "numbers",
+            "addition",
+            "multiplication"
+          ],
+          "target": "numbers",
+          "chain": [
+            "numbers",
+            "addition",
+            "multiplication"
+          ],
+          "wrong_index": 1,
+          "wrong": "subtraction",
+          "options": [
+            "division",
+            "equivalent",
+            "addition"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «الجمع والطرح» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«الضرب»: جمع متكرر لنفس العدد، فهو من «الضرب والقسمة»، مش من «الجمع والطرح».",
+            "أما «الجمع والطرح»: الأعداد، الجمع، الطرح."
+          ],
+          "concepts": [
+            "numbers",
+            "addition",
+            "subtraction"
+          ],
+          "target": "numbers",
+          "family": [
+            "numbers",
+            "addition",
+            "subtraction"
+          ],
+          "intruder": "multiplication",
+          "intros": {
+            "numbers": "رموز نعدّ بها الأشياء",
+            "addition": "ضمّ عددين أو أكثر معاً",
+            "subtraction": "أخذ عدد من عدد آخر",
+            "multiplication": "جمع متكرر لنفس العدد"
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "addition",
+      "title": "الجمع",
+      "difficulty": 1,
+      "minutes": 8,
+      "questions": [
+        {
+          "template": "match",
+          "difficulty": "easy",
+          "question": "وصّل «الجمع» وجيرانه بمعانيهم",
+          "how": "اسحب خط من كل مفهوم لمعناه (أو اكبس على المفهوم وبعدين على المعنى).",
+          "solution": [
+            "الجمع: ضمّ عددين أو أكثر معاً؛ ينتج عنه المجموع",
+            "الأعداد: رموز نعدّ بها الأشياء؛ تتكوّن من آحاد وعشرات ومئات",
+            "الضرب: جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب"
+          ],
+          "concepts": [
+            "addition",
+            "numbers",
+            "multiplication"
+          ],
+          "target": "addition",
+          "pairs": [
+            [
+              "addition",
+              "ضمّ عددين أو أكثر معاً؛ ينتج عنه المجموع"
+            ],
+            [
+              "numbers",
+              "رموز نعدّ بها الأشياء؛ تتكوّن من آحاد وعشرات ومئات"
+            ],
+            [
+              "multiplication",
+              "جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب"
+            ]
+          ]
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «الجمع والطرح». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الجمع»: ضمّ عددين أو أكثر معاً؛ ينتج عنه المجموع"
+          ],
+          "concepts": [
+            "addition"
+          ],
+          "target": "addition",
+          "clues": [
+            "ينتج عنه المجموع",
+            "ضمّ عددين أو أكثر معاً"
+          ],
+          "options": [
+            "division",
+            "addition",
+            "subtraction",
+            "numbers"
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «الجمع»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «الجمع»: الأعداد",
+            "بعد «الجمع»: الضرب، الطرح، القسمة"
+          ],
+          "concepts": [
+            "addition",
+            "numbers",
+            "multiplication",
+            "subtraction",
+            "division"
+          ],
+          "target": "addition",
+          "before": [
+            "numbers"
+          ],
+          "after": [
+            "multiplication",
+            "subtraction",
+            "division"
+          ]
+        },
+        {
+          "template": "adjust",
+          "difficulty": "hard",
+          "question": "اضبط «ناتج ٣ + ٤» صح",
+          "how": "اقرأ المعلومة، حط توقّعك على الشريط، وبعدين «جرّب» وشوف النبتة.",
+          "solution": [
+            "الصح بين 7 و 7 .",
+            "قليل… عدّ ٣ وبعدين ٤ كمان.",
+            "كثير… ٣ + ٤ أقل من هيك."
+          ],
+          "concepts": [
+            "addition"
+          ],
+          "target": "addition",
+          "factor": {
+            "label": "ناتج ٣ + ٤",
+            "unit": "",
+            "min": 0,
+            "max": 12,
+            "start": 0,
+            "ok_min": 7,
+            "ok_max": 7,
+            "low": "قليل… عدّ ٣ وبعدين ٤ كمان.",
+            "high": "كثير… ٣ + ٤ أقل من هيك.",
+            "hint": "ضمّ عددين أو أكثر معاً؛ ينتج عنه المجموع"
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "subtraction",
+      "title": "الطرح",
+      "difficulty": 2,
+      "minutes": 8,
+      "questions": [
+        {
+          "template": "true_false",
+          "difficulty": "easy",
+          "question": "صح ولا غلط؟ عن «الطرح»",
+          "how": "طعمي كل جملة للوحش الصح: «صح» ولا «غلط» (اسحبها لتمّه أو اكبس عليه).",
+          "solution": [
+            "✅ «الطرح»: أخذ عدد من عدد آخر",
+            "✅ «الطرح»: ينتج عنه الفرق",
+            "❌ «الطرح»: رموز نعدّ بها الأشياء ← هاد «الأعداد» مش «الطرح»",
+            "❌ «الطرح»: ضمّ عددين أو أكثر معاً ← هاد «الجمع» مش «الطرح»"
+          ],
+          "concepts": [
+            "subtraction"
+          ],
+          "target": "subtraction",
+          "statements": [
+            {
+              "text": "«الطرح»: أخذ عدد من عدد آخر",
+              "answer": true
+            },
+            {
+              "text": "«الطرح»: ينتج عنه الفرق",
+              "answer": true
+            },
+            {
+              "text": "«الطرح»: رموز نعدّ بها الأشياء",
+              "answer": false
+            },
+            {
+              "text": "«الطرح»: ضمّ عددين أو أكثر معاً",
+              "answer": false
+            }
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «الطرح»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «الطرح»: الجمع، الأعداد",
+            "بعد «الطرح»: القسمة، الكسر، المقام"
+          ],
+          "concepts": [
+            "subtraction",
+            "addition",
+            "numbers",
+            "division",
+            "fraction",
+            "denominator"
+          ],
+          "target": "subtraction",
+          "before": [
+            "addition",
+            "numbers"
+          ],
+          "after": [
+            "division",
+            "fraction",
+            "denominator"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الطرح»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الأعداد» مش من السلسلة، مكانه «الجمع»",
+            "الجمع ← الطرح ← القسمة"
+          ],
+          "concepts": [
+            "subtraction",
+            "addition",
+            "division"
+          ],
+          "target": "subtraction",
+          "chain": [
+            "addition",
+            "subtraction",
+            "division"
+          ],
+          "wrong_index": 0,
+          "wrong": "numbers",
+          "options": [
+            "compare",
+            "multiplication",
+            "addition"
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «الطرح»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "الجمع لازم قبل الطرح"
+          ],
+          "concepts": [
+            "subtraction",
+            "addition"
+          ],
+          "target": "subtraction",
+          "correct": [
+            "addition"
+          ],
+          "options": [
+            "fraction",
+            "addition",
+            "division",
+            "multiplication"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "prereq(numbers): nothing comes before it",
+    "unlocks(numbers): not enough wrong roads",
+    "sort(numbers): needs concepts both before and after it",
+    "predict(numbers): no unrelated concept to compare with",
+    "adjust(numbers): no numbers in the graph for this concept",
+    "unlocks(addition): not enough wrong roads",
+    "predict(addition): no unrelated concept to compare with",
+    "unlocks(subtraction): not enough wrong roads",
+    "adjust(subtraction): no numbers in the graph for this concept"
+  ],
+  "art": {}
+}

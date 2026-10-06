@@ -1,0 +1,389 @@
+{
+  "book_id": "b_math",
+  "unit_id": "u_num",
+  "topic_id": "t_frac",
+  "lesson_id": "l_frac",
+  "lesson_title": "مدخل إلى الكسور",
+  "lesson_minutes": 18,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "default",
+  "icons": {
+    "numbers": "🔢",
+    "addition": "➕",
+    "subtraction": "➖",
+    "multiplication": "✖️",
+    "division": "➗",
+    "fraction": "🍕",
+    "numerator": "🔼",
+    "denominator": "🔽",
+    "equivalent": "🟰",
+    "compare": "⚖️"
+  },
+  "coverage": {
+    "concepts": 3,
+    "ready": 3,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 12,
+  "concepts": [
+    {
+      "concept_id": "fraction",
+      "title": "الكسر",
+      "difficulty": 2,
+      "minutes": 8,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «الكسر»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "الكسر: جزء من كلّ مقسوم إلى أجزاء متساوية؛ يُكتب بسطاً فوق مقام"
+          ],
+          "concepts": [
+            "fraction"
+          ],
+          "target": "fraction",
+          "options": [
+            "جزء من كلّ مقسوم إلى أجزاء متساوية؛ يُكتب بسطاً فوق مقام",
+            "العدد فوق خط الكسر؛ يدلّ على عدد الأجزاء المأخوذة",
+            "العدد تحت خط الكسر؛ يدلّ على عدد الأجزاء المتساوية للكلّ",
+            "معرفة أيّ الكسرين أكبر؛ نوحّد المقامات ثم نقارن البسوط"
+          ],
+          "answer": "جزء من كلّ مقسوم إلى أجزاء متساوية؛ يُكتب بسطاً فوق مقام"
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «مدخل إلى الكسور». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الكسر»: جزء من كلّ مقسوم إلى أجزاء متساوية؛ يُكتب بسطاً فوق مقام"
+          ],
+          "concepts": [
+            "fraction"
+          ],
+          "target": "fraction",
+          "clues": [
+            "يُكتب بسطاً فوق مقام",
+            "جزء من كلّ مقسوم إلى أجزاء متساوية"
+          ],
+          "options": [
+            "fraction",
+            "compare",
+            "denominator",
+            "numerator"
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «الكسر»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «الكسر»: القسمة، الضرب، الطرح",
+            "بعد «الكسر»: المقام، البسط، الكسور المتكافئة"
+          ],
+          "concepts": [
+            "fraction",
+            "division",
+            "multiplication",
+            "subtraction",
+            "denominator",
+            "numerator",
+            "equivalent"
+          ],
+          "target": "fraction",
+          "before": [
+            "division",
+            "multiplication",
+            "subtraction"
+          ],
+          "after": [
+            "denominator",
+            "numerator",
+            "equivalent"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الكسر»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«البسط» مش من السلسلة، مكانه «المقام»",
+            "القسمة ← الكسر ← المقام"
+          ],
+          "concepts": [
+            "fraction",
+            "division",
+            "denominator"
+          ],
+          "target": "fraction",
+          "chain": [
+            "division",
+            "fraction",
+            "denominator"
+          ],
+          "wrong_index": 2,
+          "wrong": "numerator",
+          "options": [
+            "denominator",
+            "equivalent",
+            "compare"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "numerator",
+      "title": "البسط",
+      "difficulty": 2,
+      "minutes": 5,
+      "questions": [
+        {
+          "template": "match",
+          "difficulty": "easy",
+          "question": "وصّل «البسط» وجيرانه بمعانيهم",
+          "how": "اسحب خط من كل مفهوم لمعناه (أو اكبس على المفهوم وبعدين على المعنى).",
+          "solution": [
+            "البسط: العدد فوق خط الكسر؛ يدلّ على عدد الأجزاء المأخوذة",
+            "الكسر: جزء من كلّ مقسوم إلى أجزاء متساوية؛ يُكتب بسطاً فوق مقام",
+            "الكسور المتكافئة: كسور مختلفة الشكل لها نفس القيمة؛ نحصل عليها بضرب البسط والمقام في نفس العدد"
+          ],
+          "concepts": [
+            "numerator",
+            "fraction",
+            "equivalent"
+          ],
+          "target": "numerator",
+          "pairs": [
+            [
+              "numerator",
+              "العدد فوق خط الكسر؛ يدلّ على عدد الأجزاء المأخوذة"
+            ],
+            [
+              "fraction",
+              "جزء من كلّ مقسوم إلى أجزاء متساوية؛ يُكتب بسطاً فوق مقام"
+            ],
+            [
+              "equivalent",
+              "كسور مختلفة الشكل لها نفس القيمة؛ نحصل عليها بضرب البسط والمقام في نفس العدد"
+            ]
+          ]
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «مدخل إلى الكسور». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «البسط»: العدد فوق خط الكسر؛ يدلّ على عدد الأجزاء المأخوذة"
+          ],
+          "concepts": [
+            "numerator"
+          ],
+          "target": "numerator",
+          "clues": [
+            "يدلّ على عدد الأجزاء المأخوذة",
+            "العدد فوق خط الكسر"
+          ],
+          "options": [
+            "fraction",
+            "numerator",
+            "denominator",
+            "equivalent"
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «البسط»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «البسط»: الكسر، القسمة، الضرب",
+            "بعد «البسط»: الكسور المتكافئة، مقارنة الكسور"
+          ],
+          "concepts": [
+            "numerator",
+            "fraction",
+            "division",
+            "multiplication",
+            "equivalent",
+            "compare"
+          ],
+          "target": "numerator",
+          "before": [
+            "fraction",
+            "division",
+            "multiplication"
+          ],
+          "after": [
+            "equivalent",
+            "compare"
+          ]
+        },
+        {
+          "template": "adjust",
+          "difficulty": "hard",
+          "question": "اضبط «البسط في كسر «٣ من ٨ قطع بيتزا»» صح",
+          "how": "اقرأ المعلومة، حط توقّعك على الشريط، وبعدين «جرّب» وشوف النبتة.",
+          "solution": [
+            "الصح بين 3 و 3 .",
+            "قليل… كم قطعة أخذنا؟",
+            "كثير… البسط عدد القطع المأخوذة بس."
+          ],
+          "concepts": [
+            "numerator"
+          ],
+          "target": "numerator",
+          "factor": {
+            "label": "البسط في كسر «٣ من ٨ قطع بيتزا»",
+            "unit": "",
+            "min": 0,
+            "max": 8,
+            "start": 0,
+            "ok_min": 3,
+            "ok_max": 3,
+            "low": "قليل… كم قطعة أخذنا؟",
+            "high": "كثير… البسط عدد القطع المأخوذة بس.",
+            "hint": "العدد فوق خط الكسر؛ يدلّ على عدد الأجزاء المأخوذة"
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "denominator",
+      "title": "المقام",
+      "difficulty": 2,
+      "minutes": 5,
+      "questions": [
+        {
+          "template": "true_false",
+          "difficulty": "easy",
+          "question": "صح ولا غلط؟ عن «المقام»",
+          "how": "طعمي كل جملة للوحش الصح: «صح» ولا «غلط» (اسحبها لتمّه أو اكبس عليه).",
+          "solution": [
+            "❌ «المقام»: جزء من كلّ مقسوم إلى أجزاء متساوية ← هاد «الكسر» مش «المقام»",
+            "✅ «المقام»: يدلّ على عدد الأجزاء المتساوية للكلّ",
+            "❌ «المقام»: العدد فوق خط الكسر ← هاد «البسط» مش «المقام»",
+            "✅ «المقام»: العدد تحت خط الكسر"
+          ],
+          "concepts": [
+            "denominator"
+          ],
+          "target": "denominator",
+          "statements": [
+            {
+              "text": "«المقام»: جزء من كلّ مقسوم إلى أجزاء متساوية",
+              "answer": false
+            },
+            {
+              "text": "«المقام»: يدلّ على عدد الأجزاء المتساوية للكلّ",
+              "answer": true
+            },
+            {
+              "text": "«المقام»: العدد فوق خط الكسر",
+              "answer": false
+            },
+            {
+              "text": "«المقام»: العدد تحت خط الكسر",
+              "answer": true
+            }
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «المقام»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«البسط» مش من السلسلة، مكانه «الكسر»",
+            "الكسر ← المقام ← الكسور المتكافئة"
+          ],
+          "concepts": [
+            "denominator",
+            "fraction",
+            "equivalent"
+          ],
+          "target": "denominator",
+          "chain": [
+            "fraction",
+            "denominator",
+            "equivalent"
+          ],
+          "wrong_index": 0,
+          "wrong": "numerator",
+          "options": [
+            "subtraction",
+            "compare",
+            "fraction"
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «المقام»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "الكسر لازم قبل المقام"
+          ],
+          "concepts": [
+            "denominator",
+            "fraction"
+          ],
+          "target": "denominator",
+          "correct": [
+            "fraction"
+          ],
+          "options": [
+            "fraction",
+            "compare",
+            "numerator",
+            "equivalent"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «مدخل إلى الكسور» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«مقارنة الكسور»: معرفة أيّ الكسرين أكبر، فهي من «الكسور المتكافئة والمقارنة»، مش من «مدخل إلى الكسور».",
+            "أما «مدخل إلى الكسور»: المقام، البسط، الكسر."
+          ],
+          "concepts": [
+            "denominator",
+            "numerator",
+            "fraction"
+          ],
+          "target": "denominator",
+          "family": [
+            "denominator",
+            "numerator",
+            "fraction"
+          ],
+          "intruder": "compare",
+          "intros": {
+            "denominator": "العدد تحت خط الكسر",
+            "numerator": "العدد فوق خط الكسر",
+            "fraction": "جزء من كلّ مقسوم إلى أجزاء متساوية",
+            "compare": "معرفة أيّ الكسرين أكبر"
+          }
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "unlocks(fraction): not enough wrong roads",
+    "predict(fraction): no unrelated concept to compare with",
+    "adjust(fraction): no numbers in the graph for this concept",
+    "unlocks(numerator): not enough wrong roads",
+    "unlocks(denominator): not enough wrong roads",
+    "adjust(denominator): no numbers in the graph for this concept"
+  ],
+  "art": {}
+}

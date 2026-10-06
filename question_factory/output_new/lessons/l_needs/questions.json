@@ -1,0 +1,526 @@
+{
+  "book_id": "sci_g4",
+  "unit_id": "u_plants",
+  "topic_id": "t_structure",
+  "lesson_id": "l_needs",
+  "lesson_title": "حاجات النبات",
+  "lesson_minutes": 12,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "garden",
+  "icons": {
+    "root": "🫚",
+    "stem": "🌿",
+    "leaf": "🍃",
+    "flower": "🌸",
+    "fruit": "🍎",
+    "seed": "🌰",
+    "water": "💧",
+    "sunlight": "☀️",
+    "air": "💨",
+    "soil": "🟫",
+    "germination": "🌱",
+    "pollination": "🐝",
+    "seed_dispersal": "🌬️"
+  },
+  "coverage": {
+    "concepts": 4,
+    "ready": 4,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 16,
+  "concepts": [
+    {
+      "concept_id": "water",
+      "title": "الماء",
+      "difficulty": "easy",
+      "minutes": 3,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «الماء»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "الماء: يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه"
+          ],
+          "concepts": [
+            "water"
+          ],
+          "target": "water",
+          "options": [
+            "يأخذ النبات منه غازاً يحتاجه لصنع الغذاء",
+            "تستخدمه الورقة لصنع الغذاء؛ بدونه يضعف النبات ويصفرّ",
+            "تثبّت الجذر وتعطيه الماء والأملاح",
+            "يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه"
+          ],
+          "answer": "يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه"
+        },
+        {
+          "template": "predict",
+          "difficulty": "mid",
+          "question": "شو بيصير لو اختفى «الماء»؟",
+          "how": "توقّع أول، وبعدين شوف شو بيصير للباقين.",
+          "solution": [
+            "«الجذر» بيحتاج «الماء»",
+            "«الساق» بيحتاج «الجذر»",
+            "«الورقة» بتحتاج «الساق»",
+            "«التربة» ما بتحتاج «الماء»، فما بتتأثر."
+          ],
+          "concepts": [
+            "water",
+            "root",
+            "stem",
+            "leaf"
+          ],
+          "target": "water",
+          "options": [
+            "ما في إشي بيتأثر، كل واحد لحاله",
+            "«الجذر» ثم «الساق» ثم «الورقة» بيتأثروا، لأنه كل واحد بيحتاج اللي قبله",
+            "«الورقة» بتصير أقوى",
+            "بس «التربة» بتتأثر"
+          ],
+          "answer": 1,
+          "affected": [
+            "root",
+            "stem",
+            "leaf"
+          ],
+          "unaffected": [
+            "soil"
+          ]
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «حاجات النبات». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الماء»: يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه"
+          ],
+          "concepts": [
+            "water"
+          ],
+          "target": "water",
+          "clues": [
+            "ينقله الساق",
+            "يحتاجه النبات ليصنع غذاءه",
+            "يمتصه الجذر"
+          ],
+          "options": [
+            "sunlight",
+            "soil",
+            "water",
+            "air"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الماء»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الهواء» مش من السلسلة، مكانه «الساق»",
+            "الماء ← الجذر ← الساق"
+          ],
+          "concepts": [
+            "water",
+            "root",
+            "stem"
+          ],
+          "target": "water",
+          "chain": [
+            "water",
+            "root",
+            "stem"
+          ],
+          "wrong_index": 2,
+          "wrong": "air",
+          "options": [
+            "soil",
+            "sunlight",
+            "stem"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "sunlight",
+      "title": "ضوء الشمس",
+      "difficulty": "easy",
+      "minutes": 3,
+      "questions": [
+        {
+          "template": "match",
+          "difficulty": "easy",
+          "question": "وصّل «ضوء الشمس» وجيرانه بمعانيهم",
+          "how": "اسحب خط من كل مفهوم لمعناه (أو اكبس على المفهوم وبعدين على المعنى).",
+          "solution": [
+            "ضوء الشمس: تستخدمه الورقة لصنع الغذاء؛ بدونه يضعف النبات ويصفرّ",
+            "الورقة: جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء",
+            "الماء: يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه"
+          ],
+          "concepts": [
+            "sunlight",
+            "leaf",
+            "water"
+          ],
+          "target": "sunlight",
+          "pairs": [
+            [
+              "sunlight",
+              "تستخدمه الورقة لصنع الغذاء؛ بدونه يضعف النبات ويصفرّ"
+            ],
+            [
+              "leaf",
+              "جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء"
+            ],
+            [
+              "water",
+              "يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه"
+            ]
+          ]
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «حاجات النبات». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «ضوء الشمس»: تستخدمه الورقة لصنع الغذاء؛ بدونه يضعف النبات ويصفرّ"
+          ],
+          "concepts": [
+            "sunlight"
+          ],
+          "target": "sunlight",
+          "clues": [
+            "بدونه يضعف النبات",
+            "تستخدمه الورقة لصنع الغذاء"
+          ],
+          "options": [
+            "sunlight",
+            "soil",
+            "air",
+            "water"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «حاجات النبات» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«الساق»: يحمل النبتة، فهو من «أجزاء النبات»، مش من «حاجات النبات».",
+            "أما «حاجات النبات»: ضوء الشمس، الهواء، الماء."
+          ],
+          "concepts": [
+            "sunlight",
+            "air",
+            "water"
+          ],
+          "target": "sunlight",
+          "family": [
+            "sunlight",
+            "air",
+            "water"
+          ],
+          "intruder": "stem",
+          "intros": {
+            "sunlight": "تستخدمه الورقة لصنع الغذاء",
+            "air": "يأخذ النبات منه غازاً يحتاجه لصنع الغذاء",
+            "water": "يمتصه الجذر",
+            "stem": "يحمل النبتة"
+          }
+        },
+        {
+          "template": "unlocks",
+          "difficulty": "mid",
+          "question": "مين بيحتاج «ضوء الشمس»؟ 🚶 رحلة",
+          "how": "بكل مفترق اختار مين بيحتاج اللي إنت عنده، وامشي لعنده. انتبه من ثعلوب 🦊، والبومة 🦉 بتساعدك (بنجمة).",
+          "solution": [
+            "ضوء الشمس ← الورقة",
+            "بعد «ضوء الشمس» بييجي «الورقة»"
+          ],
+          "concepts": [
+            "sunlight",
+            "leaf"
+          ],
+          "target": "sunlight",
+          "route": [
+            "sunlight",
+            "leaf"
+          ],
+          "junctions": [
+            [
+              "air",
+              "leaf",
+              "soil",
+              "water"
+            ]
+          ],
+          "hints": [
+            [
+              "فكّر: مين بيستعمل «ضوء الشمس» أو بيطلع منه؟",
+              "تذكّر: تستخدمه الورقة لصنع الغذاء",
+              "المحطة الجاية اسمها بيبلش بـ «ال…»"
+            ]
+          ],
+          "whys": [
+            "«الورقة»: جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "air",
+      "title": "الهواء",
+      "difficulty": "medium",
+      "minutes": 3,
+      "questions": [
+        {
+          "template": "true_false",
+          "difficulty": "easy",
+          "question": "صح ولا غلط؟ عن «الهواء»",
+          "how": "طعمي كل جملة للوحش الصح: «صح» ولا «غلط» (اسحبها لتمّه أو اكبس عليه).",
+          "solution": [
+            "❌ «الهواء»: بدونه يضعف النبات ← هاد «ضوء الشمس» مش «الهواء»",
+            "❌ «الهواء»: يمتصه الجذر ← هاد «الماء» مش «الهواء»",
+            "✅ «الهواء»: يأخذ النبات منه غازاً يحتاجه لصنع الغذاء",
+            "❌ «الهواء»: يمكن أن تنمو لتصبح نبتة جديدة ← هاد «البذرة» مش «الهواء»"
+          ],
+          "concepts": [
+            "air"
+          ],
+          "target": "air",
+          "statements": [
+            {
+              "text": "«الهواء»: بدونه يضعف النبات",
+              "answer": false
+            },
+            {
+              "text": "«الهواء»: يمتصه الجذر",
+              "answer": false
+            },
+            {
+              "text": "«الهواء»: يأخذ النبات منه غازاً يحتاجه لصنع الغذاء",
+              "answer": true
+            },
+            {
+              "text": "«الهواء»: يمكن أن تنمو لتصبح نبتة جديدة",
+              "answer": false
+            }
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «حاجات النبات» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«الزهرة»: جزء مسؤول عن التكاثر، فهي من «أجزاء النبات»، مش من «حاجات النبات».",
+            "أما «حاجات النبات»: الهواء، ضوء الشمس، الماء."
+          ],
+          "concepts": [
+            "air",
+            "sunlight",
+            "water"
+          ],
+          "target": "air",
+          "family": [
+            "air",
+            "sunlight",
+            "water"
+          ],
+          "intruder": "flower",
+          "intros": {
+            "air": "يأخذ النبات منه غازاً يحتاجه لصنع الغذاء",
+            "sunlight": "تستخدمه الورقة لصنع الغذاء",
+            "water": "يمتصه الجذر",
+            "flower": "جزء مسؤول عن التكاثر"
+          }
+        },
+        {
+          "template": "unlocks",
+          "difficulty": "mid",
+          "question": "مين بيحتاج «الهواء»؟ 🚶 رحلة",
+          "how": "بكل مفترق اختار مين بيحتاج اللي إنت عنده، وامشي لعنده. انتبه من ثعلوب 🦊، والبومة 🦉 بتساعدك (بنجمة).",
+          "solution": [
+            "الهواء ← الورقة",
+            "بعد «الهواء» بييجي «الورقة»"
+          ],
+          "concepts": [
+            "air",
+            "leaf"
+          ],
+          "target": "air",
+          "route": [
+            "air",
+            "leaf"
+          ],
+          "junctions": [
+            [
+              "water",
+              "soil",
+              "sunlight",
+              "leaf"
+            ]
+          ],
+          "hints": [
+            [
+              "فكّر: مين بيستعمل «الهواء» أو بيطلع منه؟",
+              "تذكّر: يأخذ النبات منه غازاً يحتاجه لصنع الغذاء",
+              "المحطة الجاية اسمها بيبلش بـ «ال…»"
+            ]
+          ],
+          "whys": [
+            "«الورقة»: جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء"
+          ]
+        },
+        {
+          "template": "sequence",
+          "difficulty": "mid",
+          "question": "ابنِ جسر «الهواء»",
+          "how": "ركّب قطع الجسر بالترتيب من الأساس (اسحب أو اكبس)، وبعدين «🚗 يلا!» وخلّي البذرة تقطع.",
+          "solution": [
+            "الهواء قبل الورقة"
+          ],
+          "concepts": [
+            "air",
+            "leaf"
+          ],
+          "target": "air",
+          "order": [
+            "air",
+            "leaf"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "soil",
+      "title": "التربة",
+      "difficulty": "easy",
+      "minutes": 3,
+      "questions": [
+        {
+          "template": "spell",
+          "difficulty": "easy",
+          "question": "ركّب اسم المفهوم",
+          "how": "اقرأ المعنى، واسحب الحروف لمكانها (أو اكبس عليها بالترتيب).",
+          "solution": [
+            "«تثبّت الجذر وتعطيه الماء والأملاح» = التربة"
+          ],
+          "concepts": [
+            "soil"
+          ],
+          "target": "soil",
+          "word": "التربة",
+          "clue": "تثبّت الجذر وتعطيه الماء والأملاح"
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «التربة»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الماء» مش من السلسلة، مكانه «الساق»",
+            "التربة ← الجذر ← الساق"
+          ],
+          "concepts": [
+            "soil",
+            "root",
+            "stem"
+          ],
+          "target": "soil",
+          "chain": [
+            "soil",
+            "root",
+            "stem"
+          ],
+          "wrong_index": 2,
+          "wrong": "water",
+          "options": [
+            "sunlight",
+            "air",
+            "stem"
+          ]
+        },
+        {
+          "template": "sequence",
+          "difficulty": "mid",
+          "question": "ابنِ جسر «التربة»",
+          "how": "ركّب قطع الجسر بالترتيب من الأساس (اسحب أو اكبس)، وبعدين «🚗 يلا!» وخلّي البذرة تقطع.",
+          "solution": [
+            "التربة قبل الجذر",
+            "الجذر قبل الساق"
+          ],
+          "concepts": [
+            "soil",
+            "root",
+            "stem"
+          ],
+          "target": "soil",
+          "order": [
+            "soil",
+            "root",
+            "stem"
+          ]
+        },
+        {
+          "template": "predict",
+          "difficulty": "mid",
+          "question": "شو بيصير لو اختفى «التربة»؟",
+          "how": "توقّع أول، وبعدين شوف شو بيصير للباقين.",
+          "solution": [
+            "«الجذر» بيحتاج «التربة»",
+            "«الساق» بيحتاج «الجذر»",
+            "«الورقة» بتحتاج «الساق»",
+            "«ضوء الشمس» ما بيحتاج «التربة»، فما بيتأثر."
+          ],
+          "concepts": [
+            "soil",
+            "root",
+            "stem",
+            "leaf"
+          ],
+          "target": "soil",
+          "options": [
+            "بس «ضوء الشمس» بيتأثر",
+            "ما في إشي بيتأثر، كل واحد لحاله",
+            "«الجذر» ثم «الساق» ثم «الورقة» بيتأثروا، لأنه كل واحد بيحتاج اللي قبله",
+            "«الورقة» بتصير أقوى"
+          ],
+          "answer": 2,
+          "affected": [
+            "root",
+            "stem",
+            "leaf"
+          ],
+          "unaffected": [
+            "sunlight"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "prereq(water): nothing comes before it",
+    "sort(water): needs concepts both before and after it",
+    "adjust(water): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "fix_chain(sunlight): needs a chain of 3+",
+    "prereq(sunlight): nothing comes before it",
+    "sort(sunlight): needs concepts both before and after it",
+    "adjust(sunlight): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "fix_chain(air): needs a chain of 3+",
+    "prereq(air): nothing comes before it",
+    "sort(air): needs concepts both before and after it",
+    "who_am_i(air): the meaning is too short for 2+ clues",
+    "adjust(air): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "prereq(soil): nothing comes before it",
+    "sort(soil): needs concepts both before and after it",
+    "adjust(soil): not a numeric subject (memorise/understand lessons do not get number sliders)"
+  ],
+  "art": {}
+}

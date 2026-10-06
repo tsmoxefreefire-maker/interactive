@@ -1,0 +1,107 @@
+{
+  "source_graph": "math_book_graph.json",
+  "generated_on": "2026-10-06",
+  "lessons": [
+    {
+      "lesson_id": "l_addsub",
+      "title": "الجمع والطرح",
+      "unit_id": "u_num",
+      "topic_id": "t_ops",
+      "lesson_minutes": 22,
+      "questions": 12,
+      "concepts": {
+        "numbers": 4,
+        "addition": 4,
+        "subtraction": 4
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "prereq(numbers): nothing comes before it",
+        "unlocks(numbers): not enough wrong roads",
+        "sort(numbers): needs concepts both before and after it",
+        "predict(numbers): no unrelated concept to compare with",
+        "adjust(numbers): no numbers in the graph for this concept",
+        "unlocks(addition): not enough wrong roads",
+        "predict(addition): no unrelated concept to compare with",
+        "unlocks(subtraction): not enough wrong roads",
+        "adjust(subtraction): no numbers in the graph for this concept"
+      ]
+    },
+    {
+      "lesson_id": "l_eqfrac",
+      "title": "الكسور المتكافئة والمقارنة",
+      "unit_id": "u_num",
+      "topic_id": "t_frac",
+      "lesson_minutes": 17,
+      "questions": 7,
+      "concepts": {
+        "equivalent": 4,
+        "compare": 3
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "spell(equivalent): no meaning or the name is too short/long",
+        "prereq(equivalent): not enough wrong options",
+        "unlocks(equivalent): not enough wrong roads",
+        "odd_one_out(equivalent): the lesson is too small or the book has no other lesson",
+        "predict(equivalent): no unrelated concept to compare with",
+        "adjust(equivalent): no numbers in the graph for this concept",
+        "match(compare): not enough neighbours with meanings",
+        "memory(compare): not enough neighbours with meanings",
+        "prereq(compare): not enough wrong options",
+        "unlocks(compare): nothing comes after it",
+        "sort(compare): needs concepts both before and after it",
+        "odd_one_out(compare): the lesson is too small or the book has no other lesson",
+        "predict(compare): nothing needs it",
+        "adjust(compare): no numbers in the graph for this concept"
+      ]
+    },
+    {
+      "lesson_id": "l_frac",
+      "title": "مدخل إلى الكسور",
+      "unit_id": "u_num",
+      "topic_id": "t_frac",
+      "lesson_minutes": 18,
+      "questions": 12,
+      "concepts": {
+        "fraction": 4,
+        "numerator": 4,
+        "denominator": 4
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "unlocks(fraction): not enough wrong roads",
+        "predict(fraction): no unrelated concept to compare with",
+        "adjust(fraction): no numbers in the graph for this concept",
+        "unlocks(numerator): not enough wrong roads",
+        "unlocks(denominator): not enough wrong roads",
+        "adjust(denominator): no numbers in the graph for this concept"
+      ]
+    },
+    {
+      "lesson_id": "l_muldiv",
+      "title": "الضرب والقسمة",
+      "unit_id": "u_num",
+      "topic_id": "t_ops",
+      "lesson_minutes": 20,
+      "questions": 8,
+      "concepts": {
+        "multiplication": 4,
+        "division": 4
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "unlocks(multiplication): not enough wrong roads",
+        "odd_one_out(multiplication): the lesson is too small or the book has no other lesson",
+        "unlocks(division): not enough wrong roads",
+        "odd_one_out(division): the lesson is too small or the book has no other lesson",
+        "predict(division): no unrelated concept to compare with",
+        "adjust(division): no numbers in the graph for this concept"
+      ]
+    }
+  ]
+}

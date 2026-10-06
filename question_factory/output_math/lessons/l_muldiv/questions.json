@@ -1,0 +1,278 @@
+{
+  "book_id": "b_math",
+  "unit_id": "u_num",
+  "topic_id": "t_ops",
+  "lesson_id": "l_muldiv",
+  "lesson_title": "الضرب والقسمة",
+  "lesson_minutes": 20,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "default",
+  "icons": {
+    "numbers": "🔢",
+    "addition": "➕",
+    "subtraction": "➖",
+    "multiplication": "✖️",
+    "division": "➗",
+    "fraction": "🍕",
+    "numerator": "🔼",
+    "denominator": "🔽",
+    "equivalent": "🟰",
+    "compare": "⚖️"
+  },
+  "coverage": {
+    "concepts": 2,
+    "ready": 2,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 8,
+  "concepts": [
+    {
+      "concept_id": "multiplication",
+      "title": "الضرب",
+      "difficulty": 2,
+      "minutes": 10,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «الضرب»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "الضرب: جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب"
+          ],
+          "concepts": [
+            "multiplication"
+          ],
+          "target": "multiplication",
+          "options": [
+            "توزيع عدد على مجموعات متساوية؛ ينتج عنه ناتج القسمة",
+            "جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب",
+            "رموز نعدّ بها الأشياء؛ تتكوّن من آحاد وعشرات ومئات",
+            "أخذ عدد من عدد آخر؛ ينتج عنه الفرق"
+          ],
+          "answer": "جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب"
+        },
+        {
+          "template": "predict",
+          "difficulty": "mid",
+          "question": "شو بيصير لو اختفى «الضرب»؟",
+          "how": "توقّع أول، وبعدين شوف شو بيصير للباقين.",
+          "solution": [
+            "«القسمة» بتحتاج «الضرب»",
+            "«الكسر» بيحتاج «القسمة»",
+            "«المقام» بيحتاج «الكسر»",
+            "«الطرح» ما بيحتاج «الضرب»، فما بيتأثر."
+          ],
+          "concepts": [
+            "multiplication",
+            "division",
+            "fraction",
+            "denominator"
+          ],
+          "target": "multiplication",
+          "options": [
+            "«المقام» بيصير أقوى",
+            "«القسمة» ثم «الكسر» ثم «المقام» بيتأثروا، لأنه كل واحد بيحتاج اللي قبله",
+            "ما في إشي بيتأثر، كل واحد لحاله",
+            "بس «الطرح» بيتأثر"
+          ],
+          "answer": 1,
+          "affected": [
+            "division",
+            "fraction",
+            "denominator"
+          ],
+          "unaffected": [
+            "subtraction"
+          ]
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «الضرب والقسمة». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الضرب»: جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب"
+          ],
+          "concepts": [
+            "multiplication"
+          ],
+          "target": "multiplication",
+          "clues": [
+            "ينتج عنه حاصل الضرب",
+            "جمع متكرر لنفس العدد"
+          ],
+          "options": [
+            "numbers",
+            "subtraction",
+            "multiplication",
+            "division"
+          ]
+        },
+        {
+          "template": "adjust",
+          "difficulty": "hard",
+          "question": "اضبط «ناتج ٣ × ٤» صح",
+          "how": "اقرأ المعلومة، حط توقّعك على الشريط، وبعدين «جرّب» وشوف النبتة.",
+          "solution": [
+            "الصح بين 12 و 12 .",
+            "قليل… ٣ × ٤ يعني ٤ + ٤ + ٤.",
+            "كثير… ٣ × ٤ أقل من هيك."
+          ],
+          "concepts": [
+            "multiplication"
+          ],
+          "target": "multiplication",
+          "factor": {
+            "label": "ناتج ٣ × ٤",
+            "unit": "",
+            "min": 0,
+            "max": 20,
+            "start": 0,
+            "ok_min": 12,
+            "ok_max": 12,
+            "low": "قليل… ٣ × ٤ يعني ٤ + ٤ + ٤.",
+            "high": "كثير… ٣ × ٤ أقل من هيك.",
+            "hint": "جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب"
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "division",
+      "title": "القسمة",
+      "difficulty": 3,
+      "minutes": 10,
+      "questions": [
+        {
+          "template": "match",
+          "difficulty": "easy",
+          "question": "وصّل «القسمة» وجيرانه بمعانيهم",
+          "how": "اسحب خط من كل مفهوم لمعناه (أو اكبس على المفهوم وبعدين على المعنى).",
+          "solution": [
+            "القسمة: توزيع عدد على مجموعات متساوية؛ ينتج عنه ناتج القسمة",
+            "الضرب: جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب",
+            "الطرح: أخذ عدد من عدد آخر؛ ينتج عنه الفرق"
+          ],
+          "concepts": [
+            "division",
+            "multiplication",
+            "subtraction"
+          ],
+          "target": "division",
+          "pairs": [
+            [
+              "division",
+              "توزيع عدد على مجموعات متساوية؛ ينتج عنه ناتج القسمة"
+            ],
+            [
+              "multiplication",
+              "جمع متكرر لنفس العدد؛ ينتج عنه حاصل الضرب"
+            ],
+            [
+              "subtraction",
+              "أخذ عدد من عدد آخر؛ ينتج عنه الفرق"
+            ]
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «القسمة»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «القسمة»: الضرب، الطرح، الجمع",
+            "بعد «القسمة»: الكسر، المقام، البسط"
+          ],
+          "concepts": [
+            "division",
+            "multiplication",
+            "subtraction",
+            "addition",
+            "fraction",
+            "denominator",
+            "numerator"
+          ],
+          "target": "division",
+          "before": [
+            "multiplication",
+            "subtraction",
+            "addition"
+          ],
+          "after": [
+            "fraction",
+            "denominator",
+            "numerator"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «القسمة»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الطرح» مش من السلسلة، مكانه «الضرب»",
+            "الضرب ← القسمة ← الكسر"
+          ],
+          "concepts": [
+            "division",
+            "multiplication",
+            "fraction"
+          ],
+          "target": "division",
+          "chain": [
+            "multiplication",
+            "division",
+            "fraction"
+          ],
+          "wrong_index": 0,
+          "wrong": "subtraction",
+          "options": [
+            "multiplication",
+            "numbers",
+            "addition"
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «القسمة»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "الضرب لازم قبل القسمة",
+            "الطرح لازم قبل القسمة"
+          ],
+          "concepts": [
+            "division",
+            "multiplication",
+            "subtraction"
+          ],
+          "target": "division",
+          "correct": [
+            "multiplication",
+            "subtraction"
+          ],
+          "options": [
+            "denominator",
+            "multiplication",
+            "compare",
+            "equivalent",
+            "subtraction"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "unlocks(multiplication): not enough wrong roads",
+    "odd_one_out(multiplication): the lesson is too small or the book has no other lesson",
+    "unlocks(division): not enough wrong roads",
+    "odd_one_out(division): the lesson is too small or the book has no other lesson",
+    "predict(division): no unrelated concept to compare with",
+    "adjust(division): no numbers in the graph for this concept"
+  ],
+  "art": {}
+}

@@ -1,0 +1,163 @@
+{
+  "entities": [
+    {
+      "id": "plants",
+      "text": "Plants",
+      "type": "ScientificConcept",
+      "metadata": {
+        "description": "Living organisms that make their own food using sunlight, water and air."
+      }
+    },
+    {
+      "id": "plant_parts",
+      "text": "Parts of a Plant",
+      "type": "ScientificConcept",
+      "metadata": {
+        "description": "The main parts of a flowering plant and what each part does for the plant."
+      }
+    },
+    {
+      "id": "root",
+      "text": "Root",
+      "type": "ScientificConcept",
+      "metadata": {
+        "description": "The part of the plant that grows under the ground; it holds the plant in place and absorbs water and minerals from the soil."
+      }
+    },
+    {
+      "id": "stem",
+      "text": "Stem",
+      "type": "ScientificConcept",
+      "metadata": {
+        "description": "The part that holds the plant up and carries water from the root to the leaves and food from the leaves to the rest of the plant."
+      }
+    },
+    {
+      "id": "leaf",
+      "text": "Leaf",
+      "type": "ScientificConcept",
+      "metadata": {
+        "description": "The usually green, flat part of the plant where food is made using sunlight, water and air."
+      }
+    },
+    {
+      "id": "flower",
+      "text": "Flower",
+      "type": "ScientificConcept",
+      "metadata": {
+        "description": "The part of the plant responsible for reproduction; it can turn into a fruit after pollination."
+      }
+    },
+    {
+      "id": "fruit",
+      "text": "Fruit",
+      "type": "ScientificConcept",
+      "metadata": {
+        "description": "The part that grows from the flower and protects the seeds inside it."
+      }
+    },
+    {
+      "id": "seed",
+      "text": "Seed",
+      "type": "ScientificConcept",
+      "metadata": {
+        "description": "The part inside the fruit that can grow into a new plant."
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "source": "plant_parts",
+      "target": "plants",
+      "type": "subsetOf",
+      "metadata": {
+        "justification": "Parts of a Plant is a narrower concept contained within the broader topic of Plants."
+      }
+    },
+    {
+      "source": "root",
+      "target": "plant_parts",
+      "type": "subsetOf",
+      "metadata": {
+        "justification": "The root is one of the main parts of a plant."
+      }
+    },
+    {
+      "source": "stem",
+      "target": "plant_parts",
+      "type": "subsetOf",
+      "metadata": {
+        "justification": "The stem is one of the main parts of a plant."
+      }
+    },
+    {
+      "source": "leaf",
+      "target": "plant_parts",
+      "type": "subsetOf",
+      "metadata": {
+        "justification": "The leaf is one of the main parts of a plant."
+      }
+    },
+    {
+      "source": "flower",
+      "target": "plant_parts",
+      "type": "subsetOf",
+      "metadata": {
+        "justification": "The flower is one of the main parts of a plant."
+      }
+    },
+    {
+      "source": "fruit",
+      "target": "plant_parts",
+      "type": "subsetOf",
+      "metadata": {
+        "justification": "The fruit is one of the main parts of a plant."
+      }
+    },
+    {
+      "source": "seed",
+      "target": "plant_parts",
+      "type": "subsetOf",
+      "metadata": {
+        "justification": "The seed is one of the main parts of a plant."
+      }
+    },
+    {
+      "source": "root",
+      "target": "stem",
+      "type": "prerequisiteOf",
+      "metadata": {
+        "justification": "Understanding how the root absorbs water is needed to understand how the stem carries that water upward."
+      }
+    },
+    {
+      "source": "stem",
+      "target": "leaf",
+      "type": "prerequisiteOf",
+      "metadata": {
+        "justification": "Understanding how the stem carries water is needed to understand how the leaf gets the water it uses to make food."
+      }
+    },
+    {
+      "source": "flower",
+      "target": "fruit",
+      "type": "prerequisiteOf",
+      "metadata": {
+        "justification": "The fruit grows from the flower, so the flower must be understood first."
+      }
+    },
+    {
+      "source": "fruit",
+      "target": "seed",
+      "type": "prerequisiteOf",
+      "metadata": {
+        "justification": "Seeds are found inside the fruit, so the fruit must be understood first."
+      }
+    }
+  ],
+  "metadata": {
+    "source_context": "Demo curriculum for the interactive-questions prototype: a primary science textbook, Plants unit, lesson 'Parts of a Plant'.",
+    "domain": "Science",
+    "extraction_date": "2026-10-05"
+  }
+}

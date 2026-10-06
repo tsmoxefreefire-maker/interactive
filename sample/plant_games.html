@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أجزاء النبات · أسئلة تفاعلية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7FAF6; --panel:#FFFFFF; --ink:#1E2A22; --muted:#5D6B62; --line:#D5E2D8;
+  --sky:#D9EEF4; --sky2:#EAF6F9; --soil:#7A4D2B; --soil2:#5E3A1F; --leaf:#2F8F4E; --leaf2:#246F3C;
+  --sun:#F2B33D; --bad:#C8473D; --good:#2F8F4E; --water:#3A8DDE; --chip:#EEF4EF; --focus:#246F3C;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1813; --panel:#16231B; --ink:#E5EFE8; --muted:#9DB0A3; --line:#2A3D31;
+    --sky:#1C3440; --sky2:#162A33; --soil:#5A3820; --soil2:#47290F; --leaf:#4CB36E; --leaf2:#3A9A5A;
+    --sun:#F2B33D; --bad:#E2685E; --good:#4CB36E; --water:#62A8EE; --chip:#1E2E24; --focus:#7DD39A;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1813; --panel:#16231B; --ink:#E5EFE8; --muted:#9DB0A3; --line:#2A3D31;
+  --sky:#1C3440; --sky2:#162A33; --soil:#5A3820; --soil2:#47290F; --leaf:#4CB36E; --leaf2:#3A9A5A;
+  --sun:#F2B33D; --bad:#E2685E; --good:#4CB36E; --water:#62A8EE; --chip:#1E2E24; --focus:#7DD39A;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",system-ui,sans-serif;font-size:16px;line-height:1.75}
+h1,h2,h3{font-family:"Noto Kufi Arabic","IBM Plex Sans Arabic",Tahoma,sans-serif;line-height:1.35;margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:18px 16px 56px}
+
+/* header */
+.top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:end;justify-content:space-between;margin-bottom:16px}
+.top h1{font-size:clamp(1.5rem,3.2vw,2.2rem);font-weight:800}
+.top p{margin:4px 0 0;color:var(--muted);max-width:60ch}
+.steps{display:flex;gap:6px;flex-wrap:wrap}
+.step{border:1.5px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 14px;cursor:pointer;font-size:.92rem;display:flex;gap:8px;align-items:center}
+.step[aria-current="step"]{border-color:var(--leaf);background:var(--leaf);color:#fff}
+.step .dot{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.step.done .dot{background:var(--sun)}
+.step[aria-current="step"] .dot{background:#fff}
+
+/* main grid */
+.grid{display:grid;grid-template-columns:minmax(300px,1fr) minmax(320px,1.05fr);gap:16px;align-items:start}
+@media (max-width:860px){.grid{grid-template-columns:1fr}}
+.scene{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);background:var(--sky2);border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+@media (max-width:860px){.scene{position:relative;top:0}.scene .cap{position:static;margin:0 10px 10px}}
+.scene svg{display:block;width:100%;height:auto;touch-action:none}
+.scene .cap{position:absolute;inset:auto 12px 12px 12px;background:color-mix(in srgb,var(--panel) 88%,transparent);border-radius:12px;padding:8px 12px;font-size:.92rem;min-height:2.6em;transition:background .3s}
+.scene .cap.good{background:color-mix(in srgb,var(--good) 18%,var(--panel))}
+.scene .cap.bad{background:color-mix(in srgb,var(--bad) 16%,var(--panel))}
+
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}
+.panel h2{font-size:1.25rem;font-weight:700}
+.lead{color:var(--muted);margin:4px 0 14px}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;min-height:48px}
+.chipx{border:1.5px solid var(--line);background:var(--chip);border-radius:12px;padding:8px 14px;cursor:grab;user-select:none;touch-action:none;font-weight:600;transition:transform .15s,border-color .15s}
+.chipx[aria-pressed="true"]{border-color:var(--leaf);transform:translateY(-2px);box-shadow:0 3px 0 var(--leaf)}
+.chipx.used{opacity:.35;pointer-events:none}
+.chipx.shake{animation:shake .4s}
+@keyframes shake{20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.ghost{position:fixed;z-index:50;pointer-events:none;transform:translate(-50%,-60%) scale(1.05)}
+
+/* match */
+.match{position:relative;display:grid;grid-template-columns:1fr 1.6fr;gap:12px 28px}
+.match svg.lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.mcol{display:grid;gap:8px}
+.mbtn{border:1.5px solid var(--line);background:var(--chip);border-radius:12px;padding:9px 12px;text-align:right;cursor:pointer;font-size:.95rem}
+.mbtn.part{font-weight:700}
+.mbtn[aria-pressed="true"]{border-color:var(--sun);box-shadow:0 0 0 3px color-mix(in srgb,var(--sun) 35%,transparent)}
+.mbtn.locked{border-color:var(--good);background:color-mix(in srgb,var(--good) 12%,var(--panel));cursor:default}
+.mbtn.shake{animation:shake .4s;border-color:var(--bad)}
+
+/* sequence */
+.seq{display:grid;gap:14px}
+.chain{border:1px dashed var(--line);border-radius:14px;padding:12px}
+.chain h3{font-size:1rem;margin-bottom:8px}
+.slots{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.slot{min-width:92px;min-height:44px;border:2px dashed var(--line);border-radius:12px;display:grid;place-items:center;padding:6px 10px;font-weight:700;background:var(--bg);cursor:pointer}
+.slot.filled{border-style:solid;border-color:var(--leaf);background:var(--chip)}
+.slot.ok{border-color:var(--good);background:color-mix(in srgb,var(--good) 15%,var(--panel))}
+.slot.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 12%,var(--panel))}
+.arrow{color:var(--muted);font-size:1.2rem}
+
+/* predict */
+.opts{display:grid;gap:8px}
+.opt{border:1.5px solid var(--line);background:var(--chip);border-radius:12px;padding:10px 14px;text-align:right;cursor:pointer}
+.opt.right{border-color:var(--good);background:color-mix(in srgb,var(--good) 14%,var(--panel))}
+.opt.nope{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,var(--panel))}
+.why{margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--chip);display:none}
+.why.show{display:block}
+
+/* actions */
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
+.btn{border:0;border-radius:12px;padding:9px 16px;cursor:pointer;font-weight:700}
+.btn.main{background:var(--leaf);color:#fff}
+.btn.ghosty{background:transparent;border:1.5px solid var(--line)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.hint{margin-top:12px;border-radius:12px;padding:10px 12px;background:color-mix(in srgb,var(--sun) 16%,var(--panel));display:none}
+.hint.show{display:block}
+.hint b{font-family:"Noto Kufi Arabic",sans-serif}
+
+/* tabs */
+.below{margin-top:16px}
+.tabs{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.tab{border:1.5px solid var(--line);background:var(--panel);border-radius:10px;padding:6px 14px;cursor:pointer;font-weight:600}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.code{direction:ltr;text-align:left;background:var(--chip);border-radius:12px;padding:12px;font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:.82rem;line-height:1.55;overflow:auto;max-height:340px;white-space:pre}
+.checks{list-style:none;padding:0;margin:0 0 10px;display:grid;gap:4px}
+.checks li::before{content:"✓ ";color:var(--good);font-weight:800}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.flow span{background:var(--chip);border-radius:10px;padding:5px 10px;font-weight:600;font-size:.9rem}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:7em 1fr 3.2em;gap:10px;align-items:center}
+.bar .t{height:12px;border-radius:6px;background:var(--chip);overflow:hidden}
+.bar .t i{display:block;height:100%;background:var(--leaf);border-radius:6px;transition:width .5s}
+.bar .n{direction:ltr;text-align:left;font-variant-numeric:tabular-nums;color:var(--muted)}
+.small{color:var(--muted);font-size:.9rem}
+
+/* plant scene animation states */
+.part{transition:transform .5s ease, opacity .4s, filter .4s;transform-box:fill-box;transform-origin:50% 100%}
+.glow{filter:drop-shadow(0 0 6px var(--sun)) drop-shadow(0 0 2px var(--sun))}
+.wilt{transform:rotate(18deg) scaleY(.82);filter:saturate(.25) brightness(.9)}
+.wiltL{transform:rotate(-18deg) scaleY(.82);filter:saturate(.25) brightness(.9)}
+.gone{opacity:.12}
+.hot{cursor:pointer}
+.hot circle{transition:r .2s}
+.hot.over circle{r:22}
+
+/* v2 additions */
+.qhead{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:6px}
+.diff{font-size:.8rem;font-weight:700;border-radius:999px;padding:2px 10px;color:#fff}
+.diff.easy{background:var(--leaf)} .diff.mid{background:#B9770E} .diff.hard{background:var(--bad)}
+.marks{font-size:.85rem;color:var(--muted);font-weight:600}
+.qtext{font-family:"Noto Kufi Arabic",sans-serif;font-size:1.08rem;font-weight:700;margin:6px 0 4px}
+.solution{margin-top:14px;border-radius:14px;padding:12px 14px;background:color-mix(in srgb,var(--leaf) 10%,var(--panel));border:1px solid color-mix(in srgb,var(--leaf) 35%,var(--line))}
+.solution h3{font-size:1rem;margin-bottom:6px}
+.solution ol{margin:0;padding-inline-start:1.3em}
+.score{display:inline-block;margin-inline-start:8px;font-weight:800;color:var(--leaf)}
+.sliders{display:grid;gap:12px;margin:8px 0}
+.sl{display:grid;grid-template-columns:6.5em 1fr 2.2em;gap:10px;align-items:center}
+.sl input{width:100%;accent-color:var(--leaf)}
+.sl output{direction:ltr;text-align:left;font-weight:700;font-variant-numeric:tabular-nums}
+.status{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.status span{font-size:.85rem;border-radius:999px;padding:3px 10px;background:var(--chip)}
+.status span.okk{background:color-mix(in srgb,var(--good) 18%,var(--panel))}
+.status span.bad{background:color-mix(in srgb,var(--bad) 16%,var(--panel))}
+.pale{filter:saturate(.12) brightness(1.18)}
+.rot path{stroke:#6E5A3A!important}
+.step.review .dot{background:var(--bad)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>أجزاء النبات</h1>
+      <p>٦ أسئلة تفاعلية انولدت من جراف الدرس. النبتة بتتفاعل مع كل حركة، وبعد كل سؤال في حل خطوة خطوة، والأسئلة الغلط بترجعلك بالمراجعة.</p>
+    </div>
+    <nav class="steps" id="steps" aria-label="الألعاب"></nav>
+  </header>
+
+  <div class="grid">
+    <section class="scene" aria-label="مشهد النبتة">
+      <svg id="plant" viewBox="0 0 360 430" role="img" aria-labelledby="plantTitle">
+        <title id="plantTitle">نبتة مزهرة فيها جذر وساق وورق وزهرة وثمرة وبذور</title>
+        <defs>
+          <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--sky)"/><stop offset="1" stop-color="var(--sky2)"/></linearGradient>
+        </defs>
+        <rect width="360" height="268" fill="url(#skyG)"/>
+        <circle cx="306" cy="52" r="24" fill="var(--sun)" opacity=".9"/>
+        <rect y="262" width="360" height="168" fill="var(--soil)"/>
+        <path d="M0 262 Q90 252 180 262 T360 262 V272 H0Z" fill="var(--soil2)"/>
+        <g fill="var(--soil2)" opacity=".55"><circle cx="40" cy="310" r="3"/><circle cx="95" cy="372" r="2.5"/><circle cx="300" cy="330" r="3"/><circle cx="262" cy="398" r="2"/><circle cx="70" cy="410" r="2.5"/></g>
+
+        <g id="p-root" class="part" style="transform-origin:50% 0%">
+          <path d="M180 264 C178 300 170 320 150 345 M180 280 C186 310 200 330 222 352 M180 296 C176 330 182 360 176 392 M165 330 C150 340 140 352 128 360 M196 320 C210 330 222 332 236 330" stroke="#E9D6B5" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </g>
+        <g id="p-stem" class="part">
+          <path d="M180 264 C178 220 184 170 180 104" stroke="var(--leaf2)" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path d="M181 150 C198 142 214 134 232 128" stroke="var(--leaf2)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        </g>
+        <g id="p-leafL" class="part" style="transform-origin:100% 50%">
+          <path d="M178 200 C150 182 120 182 104 200 C124 216 154 218 178 200Z" fill="var(--leaf)"/>
+          <path d="M176 200 C150 198 128 198 108 200" stroke="var(--leaf2)" stroke-width="1.5" fill="none"/>
+        </g>
+        <g id="p-leafR" class="part" style="transform-origin:0% 50%">
+          <path d="M182 228 C206 210 236 212 250 228 C232 244 204 246 182 228Z" fill="var(--leaf)"/>
+          <path d="M184 228 C206 227 228 227 246 228" stroke="var(--leaf2)" stroke-width="1.5" fill="none"/>
+        </g>
+        <g id="p-flower" class="part" style="transform-origin:50% 100%">
+          <g fill="#F28AA8"><ellipse cx="180" cy="74" rx="11" ry="18"/><ellipse cx="180" cy="110" rx="11" ry="18"/><ellipse cx="162" cy="92" rx="18" ry="11"/><ellipse cx="198" cy="92" rx="18" ry="11"/>
+          <ellipse cx="167" cy="79" rx="10" ry="15" transform="rotate(-45 167 79)"/><ellipse cx="193" cy="79" rx="10" ry="15" transform="rotate(45 193 79)"/><ellipse cx="167" cy="105" rx="10" ry="15" transform="rotate(45 167 105)"/><ellipse cx="193" cy="105" rx="10" ry="15" transform="rotate(-45 193 105)"/></g>
+          <circle cx="180" cy="92" r="10" fill="var(--sun)"/>
+        </g>
+        <g id="p-fruit" class="part">
+          <circle cx="240" cy="134" r="16" fill="#E2543C"/>
+          <path d="M236 118 q4 -6 9 -2" stroke="var(--leaf2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+        <g id="p-seed" class="part">
+          <path d="M282 258 a22 14 0 0 1 44 0 Z" fill="#E2543C"/>
+          <path d="M286 258 a18 10 0 0 1 36 0 Z" fill="#F8D7C8"/>
+          <g fill="#6B3A1E"><ellipse cx="296" cy="252" rx="2.6" ry="4"/><ellipse cx="304" cy="249" rx="2.6" ry="4"/><ellipse cx="312" cy="252" rx="2.6" ry="4"/></g>
+        </g>
+        <g id="sprout" opacity="0" transform="translate(120 262) scale(2) translate(-120 -262)"><path d="M120 262 v-14" stroke="var(--leaf)" stroke-width="3"/><path d="M120 250 c-8 -6 -12 -2 -12 2 c6 2 10 0 12 -2Z M120 248 c8 -6 12 -2 12 2 c-6 2 -10 0 -12 -2Z" fill="var(--leaf)"/></g>
+        <circle id="drop" r="6" fill="var(--water)" opacity="0" cx="180" cy="380"/>
+        <g id="brokenMarks"><g id="m-root" opacity="0"><path d="M150 318 l26 22 M176 318 l-26 22" stroke="var(--bad)" stroke-width="5" stroke-linecap="round"/></g><g id="m-stem" opacity="0"><path d="M168 168 l24 10 M168 178 l24 -10" stroke="var(--bad)" stroke-width="5" stroke-linecap="round"/></g></g>
+        <g id="hotspots"></g>
+      </svg>
+      <div class="cap" id="cap" aria-live="polite">جاهزة! اختار لعبة وابدأ.</div>
+    </section>
+
+    <section class="panel" id="game" aria-live="polite"></section>
+  </div>
+
+  <section class="below">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-t="ev">الدليل لمحرك الأدلة</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="gen">كيف انولدت الألعاب</button>
+      <button class="tab" role="tab" aria-selected="false" data-t="mas">الإتقان</button>
+    </div>
+    <div class="panel" id="below"></div>
+  </section>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ===== 1. The lesson graph (same structure as the project graph) ===== */
+const GRAPH = {"entities":[
+ {"id":"plants","text":"Plants","type":"ScientificConcept","metadata":{"description":"Living organisms that make their own food using sunlight, water and air."}},
+ {"id":"plant_parts","text":"Parts of a Plant","type":"ScientificConcept","metadata":{"description":"The main parts of a flowering plant and what each part does for the plant."}},
+ {"id":"root","text":"Root","type":"ScientificConcept","metadata":{"description":"The part of the plant that grows under the ground; it holds the plant in place and absorbs water and minerals from the soil."}},
+ {"id":"stem","text":"Stem","type":"ScientificConcept","metadata":{"description":"The part that holds the plant up and carries water from the root to the leaves and food from the leaves to the rest of the plant."}},
+ {"id":"leaf","text":"Leaf","type":"ScientificConcept","metadata":{"description":"The usually green, flat part of the plant where food is made using sunlight, water and air."}},
+ {"id":"flower","text":"Flower","type":"ScientificConcept","metadata":{"description":"The part of the plant responsible for reproduction; it can turn into a fruit after pollination."}},
+ {"id":"fruit","text":"Fruit","type":"ScientificConcept","metadata":{"description":"The part that grows from the flower and protects the seeds inside it."}},
+ {"id":"seed","text":"Seed","type":"ScientificConcept","metadata":{"description":"The part inside the fruit that can grow into a new plant."}}],
+ "relationships":[
+ {"source":"plant_parts","target":"plants","type":"subsetOf"},{"source":"root","target":"plant_parts","type":"subsetOf"},{"source":"stem","target":"plant_parts","type":"subsetOf"},
+ {"source":"leaf","target":"plant_parts","type":"subsetOf"},{"source":"flower","target":"plant_parts","type":"subsetOf"},{"source":"fruit","target":"plant_parts","type":"subsetOf"},
+ {"source":"seed","target":"plant_parts","type":"subsetOf"},
+ {"source":"root","target":"stem","type":"prerequisiteOf"},{"source":"stem","target":"leaf","type":"prerequisiteOf"},
+ {"source":"flower","target":"fruit","type":"prerequisiteOf"},{"source":"fruit","target":"seed","type":"prerequisiteOf"}],
+ "metadata":{"source_context":"Demo curriculum: Plants unit, lesson 'Parts of a Plant'.","domain":"Science","extraction_date":"2026-10-05"}};
+
+/* ===== 2. The question spec the generator (LLM) fills: closed schema, data only ===== */
+const SPEC = {
+ "lesson_id":"plant_parts","language":"ar","grade_band":"primary",
+ "names":{"root":"الجذر","stem":"الساق","leaf":"الورقة","flower":"الزهرة","fruit":"الثمرة","seed":"البذرة"},
+ "questions":[
+  {"template":"label","difficulty":"easy","title":"سمّي الأجزاء","question":"وين كل جزء بالنبتة؟",
+   "how":"اسحب كل اسم لمكانه، أو اكبس على الاسم وبعدين على المكان.",
+   "targets":["root","stem","leaf","flower","fruit","seed"],
+   "solution":["الجذر تحت الأرض، لأنه بيمتص المي من التربة.","الساق بالنص، بيحمل النبتة وبيوصّل المي لفوق.","الورقة خضرا ومفلطحة، عشان تاخد شمس.","الزهرة فوق، والثمرة على الغصن، والبذور جوا الثمرة."]},
+  {"template":"match","difficulty":"easy","title":"وصّل الجزء بشغلته","question":"شو شغلة كل جزء؟",
+   "how":"اكبس على جزء، وبعدين على الشغلة اللي بيعملها.",
+   "pairs":[["root","بيثبّت النبتة وبيمتص المي من التربة"],["stem","بيحمل النبتة وبينقل المي لفوق"],["leaf","بتصنع الغذاء من الشمس والمي والهوا"],["flower","مسؤولة عن التكاثر وبتصير ثمرة"],["fruit","بتطلع من الزهرة وبتحمي البذور"],["seed","بتصير نبتة جديدة"]],
+   "solution":["كل جزء شغلته بتعتمد على مكانه.","اللي تحت الأرض (الجذر) شغلته مع المي والتربة.","اللي بالشمس (الورقة) بتصنع الغذاء.","الزهرة والثمرة والبذرة شغلتهم التكاثر."]},
+  {"template":"sequence","difficulty":"mid","title":"شغّل النبتة","question":"رتّب طريق المي وطريق التكاثر، وشغّل النبتة.",
+   "how":"اكبس على الأجزاء بالترتيب، وبعدين «شغّل».",
+   "chains":[{"title":"رحلة المي","order":["root","stem","leaf"],"effect":"water"},{"title":"من الزهرة لنبتة جديدة","order":["flower","fruit","seed"],"effect":"grow"}],
+   "solution":["المي بتدخل من الجذر، لأنه هو اللي بالتربة.","الساق بينقلها لفوق.","بتوصل للورقة، فبتصنع الغذاء.","والزهرة بتصير ثمرة، والثمرة جواها بذور، والبذرة بتنبت."]},
+  {"template":"predict","difficulty":"mid","title":"شو بيصير لو…؟","question":"توقّع أول، وبعدين شوف النتيجة.",
+   "how":"اختار توقّعك، وبنجرّبه على النبتة.",
+   "scenarios":[
+    {"remove":"root","q":"لو قطعنا الجذر، شو بيصير للورق؟","options":["بيكبر أسرع","بيذبل لأنه ما في مي بتوصله","ما بيتغير إشي"],"answer":1,"edge":["root","stem","leaf"]},
+    {"remove":"flower","q":"لو قطفنا الزهرة، شو بيصير؟","options":["ما رح تطلع ثمرة ولا بذور","الجذر بيوقف","الورق بيصير أحمر"],"answer":0,"edge":["flower","fruit","seed"]},
+    {"remove":"stem","q":"لو انكسر الساق، شو بيصير للورقة؟","options":["بتضل خضرا عادي","بتصير زهرة","بتذبل لأنه المي ما بتوصلها"],"answer":2,"edge":["stem","leaf"]}],
+   "solution":["كل جزء محتاج اللي قبله بالطريق.","بدون جذر أو ساق، المي ما بتوصل للورقة فبتذبل.","وبدون زهرة، ما في ثمرة ولا بذور."]},
+  {"template":"diagnose","difficulty":"mid","title":"النبتة الذبلانة","question":"هالنبتة ذبلانة! شو الجزء اللي فيه مشكلة؟",
+   "how":"افحص الأجزاء بالعدسة 🔍، وبعدين اختار الجزء اللي لازم نصلّحه.",
+   "cases":[{"broken":"root","clue":{"root":"الجذر مقطوع! ما في مي بتدخل للنبتة.","stem":"الساق سليم، بس فاضي: ما في مي جواته.","leaf":"الورقة ذبلانة لأنه ما وصلها مي.","flower":"الزهرة سليمة."}},
+            {"broken":"stem","clue":{"root":"الجذر سليم وعم بيمتص مي.","stem":"الساق مكسور! المي بتوقف عنده.","leaf":"الورقة ذبلانة لأنه ما وصلها مي.","flower":"الزهرة سليمة."}}],
+   "solution":["الورقة ذبلانة يعني المي ما وصلتها.","نرجع لورا بطريق المي: الورقة ← الساق ← الجذر.","أول جزء مخرّب بالطريق هو اللي لازم نصلّحه."]},
+  {"template":"sandbox","difficulty":"hard","title":"خلّي النبتة تطلّع بذور","question":"اضبط الشمس والمي والحشرات، لحتى النبتة تطلّع بذور.",
+   "how":"حرّك الأشرطة وشوف النبتة، وبعدين «جرّب».",
+   "factors":[{"id":"sun","label":"☀️ الشمس","min":0,"max":10,"start":2,"ok":[6,10],"low":"الورق شاحب: ما في شمس كفاية ليصنع الغذاء.","high":""},
+              {"id":"water","label":"💧 المي","min":0,"max":10,"start":9,"ok":[4,7],"low":"الورق ذبلان: المي قليلة.","high":"الجذور غرقت: المي كثير."},
+              {"id":"insects","label":"🐝 الحشرات","min":0,"max":10,"start":0,"ok":[3,10],"low":"ما في حشرات تلقّح الزهرة، فما بتصير ثمرة.","high":""}],
+   "edges":{"water":["root","stem","leaf"],"sun":["leaf"],"insects":["flower","fruit","seed"]},
+   "solution":["المي لازم تكون معتدلة: قليلة الورق بيذبل، وكثيرة الجذور بتغرق.","الشمس لازم تكون كثيرة، لأنه الورقة بتصنع الغذاء منها.","الحشرات بتلقّح الزهرة، فبتصير ثمرة فيها بذور."]}
+ ]};
+
+/* ===== 3. Validation against the graph ===== */
+const TEMPLATES=["label","match","sequence","predict","diagnose","sandbox"];
+function validate(){
+  const ids=new Set(GRAPH.entities.map(e=>e.id));
+  const children=GRAPH.relationships.filter(r=>r.type==="subsetOf"&&r.target===SPEC.lesson_id).map(r=>r.source);
+  const prereq=new Set(GRAPH.relationships.filter(r=>r.type==="prerequisiteOf").map(r=>r.source+">"+r.target));
+  const isPath=a=>a.every((x,i)=>i===0||prereq.has(a[i-1]+">"+x));
+  const used=new Set(); const Q=SPEC.questions; const by=t=>Q.find(q=>q.template===t);
+  Q.forEach(q=>{(q.targets||[]).forEach(x=>used.add(x));(q.pairs||[]).forEach(p=>used.add(p[0]));});
+  return [
+   ["كل جزء بالأسئلة موجود بالجراف",[...used].every(x=>ids.has(x))],
+   ["الأسئلة بتغطي كل مفاهيم الدرس ("+children.length+")",children.every(c=>used.has(c))],
+   ["كل ترتيب ماشي على علاقات «متطلب سابق»",by("sequence").chains.every(c=>isPath(c.order))],
+   ["كل سؤال «لو» وكل عامل بالملعب مبني على علاقة بالجراف",by("predict").scenarios.every(s=>isPath(s.edge))&&Object.values(by("sandbox").edges).every(isPath)],
+   ["الجزء المخرّب بكل حالة موجود بطريق المي بالجراف",by("diagnose").cases.every(c=>prereq.has(c.broken+">stem")||prereq.has(c.broken+">leaf"))],
+   ["كل سؤال إله صعوبة وحل خطوة خطوة",Q.every(q=>["easy","mid","hard"].includes(q.difficulty)&&q.solution&&q.solution.length>0)],
+   ["القوالب كلها من القائمة المسموحة",Q.every(q=>TEMPLATES.includes(q.template))]];
+}
+
+/* ===== helpers ===== */
+const $=s=>document.querySelector(s);
+const N=SPEC.names;
+const svgNS="http://www.w3.org/2000/svg";
+const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const DIFF={easy:["سهل","easy"],mid:["متوسط","mid"],hard:["صعب","hard"]};
+function shuffle(a,seed){a=a.slice();let s=seed||1;for(let i=a.length-1;i>0;i--){s=(s*9301+49297)%233280;const j=Math.floor(s/233280*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+let variant=1;
+const cap=(t,cls)=>{const c=$("#cap");c.textContent=t;c.className="cap"+(cls?" "+cls:"");};
+const PARTS={root:["p-root"],stem:["p-stem"],leaf:["p-leafL","p-leafR"],flower:["p-flower"],fruit:["p-fruit"],seed:["p-seed"]};
+function partEls(id){return (PARTS[id]||[]).map(x=>document.getElementById(x));}
+function flash(id,cls,ms){partEls(id).forEach(el=>{el.classList.add(cls);setTimeout(()=>el.classList.remove(cls),ms||900);});}
+function wilt(on){$("#p-leafL").classList.toggle("wiltL",on);$("#p-leafR").classList.toggle("wilt",on);}
+function mark(id,on){const m=document.getElementById("m-"+id);if(m)m.setAttribute("opacity",on?"1":"0");}
+function resetScene(){document.querySelectorAll(".part").forEach(p=>p.classList.remove("glow","wilt","wiltL","gone","pale","rot"));
+  $("#sprout").setAttribute("opacity","0");$("#drop").setAttribute("opacity","0");$("#hotspots").innerHTML="";mark("root",false);mark("stem",false);}
+
+/* ===== 4. Active time + evidence + marks + review queue ===== */
+const timer={start:0,acc:0,running:false,interrupted:false,
+  begin(){this.acc=0;this.interrupted=false;this.start=performance.now();this.running=!document.hidden;},
+  read(){return Math.round(this.acc+(this.running?performance.now()-this.start:0));}};
+document.addEventListener("visibilitychange",()=>{if(document.hidden&&timer.running){timer.acc+=performance.now()-timer.start;timer.running=false;timer.interrupted=true;}else if(!document.hidden&&!timer.running){timer.start=performance.now();timer.running=true;}});
+const evidence=[]; const attempts={};
+const mastery={}; Object.keys(N).forEach(k=>mastery[k]={M:0.5,n:0});
+const reviewQueue=new Set();
+let hint=null; let curQ=null;
+function record(activity,concept,outcome){ // outcome: "correct" | "partial" | "incorrect"
+  const key=activity+":"+concept; attempts[key]=(attempts[key]||0)+1;
+  const ev={concept_id:concept,activity,correctness:outcome,attempt_number:attempts[key],hint_level:hint,
+    question_difficulty:curQ?curQ.difficulty:null,response_time_ms:timer.read(),time_interrupted:timer.interrupted,
+    modality:"interaction",interaction_yields_evidence:true,timestamp:new Date().toISOString()};
+  evidence.push(ev);
+  const base=outcome==="correct"?1:outcome==="partial"?0.5:0;
+  const x=(base===1&&hint!==null&&hint>=2)?0.5:base;                 // strong hint: success counts half
+  const dw=curQ&&curQ.difficulty==="easy"?0.8:1.0;                      // difficulty weight (proposal)
+  mastery[concept].M=0.8*mastery[concept].M+0.2*x*dw; mastery[concept].n++;  // Eq7 MVP: EMA, beta 0.2
+  if(outcome!=="correct")reviewQueue.add(concept);
+  timer.begin(); renderBelow(); renderSteps();
+}
+const score={got:0,max:0};
+function setMarks(got,max){score.got=got;score.max=max;const m=$("#marks");if(m)m.textContent="العلامة: "+got+" من "+max;}
+
+/* ===== 5. Question frame: question text, difficulty, marks, hint ladder, solution ===== */
+function frame(q,body){
+  return `<div class="qhead"><h2>${q.title}</h2><span class="diff ${DIFF[q.difficulty][1]}">${DIFF[q.difficulty][0]}</span><span class="marks" id="marks"></span></div>
+    <p class="qtext">${q.question}</p><p class="lead">${q.how}</p>${body}
+    <div class="row"><button class="btn ghosty" id="hintBtn">تلميح</button><span class="small" id="hintLvl"></span></div><div class="hint" id="hintTxt"></div>`;
+}
+function bindHint(texts){
+  hint=null;
+  $("#hintBtn").addEventListener("click",()=>{hint=hint===null?0:Math.min(hint+1,texts.length-1);
+    const t=$("#hintTxt");t.innerHTML=`<b>H${hint}</b> · ${texts[hint]}`;t.classList.add("show");$("#hintLvl").textContent="مستوى التلميح H"+hint;
+    if(hint===2&&texts.onStrong)texts.onStrong();});
+}
+function showSolution(q){
+  if($("#solution"))return;
+  const d=document.createElement("div");d.className="solution";d.id="solution";
+  d.innerHTML=`<h3>الحل خطوة خطوة<span class="score">${score.got} من ${score.max}</span></h3><ol>${q.solution.map(x=>`<li>${x}</li>`).join("")}</ol>`;
+  $("#game").appendChild(d);
+}
+
+/* ===== 6. Templates ===== */
+const ANCHOR={root:[110,352,163,332],stem:[112,150,178,160],leaf:[66,246,126,204],flower:[104,58,163,84],fruit:[306,112,250,130],seed:[300,206,304,250]};
+const Q=SPEC.questions;
+let current=0; const done=new Set();
+
+function selectChipLogic(container,onDrop){
+  let selected=null;
+  container.querySelectorAll(".chipx").forEach(ch=>{
+    ch.addEventListener("click",()=>{if(ch.dataset.dragged){delete ch.dataset.dragged;return;}
+      if(selected===ch){ch.setAttribute("aria-pressed","false");selected=null;return;}
+      container.querySelectorAll(".chipx").forEach(c=>c.setAttribute("aria-pressed","false"));ch.setAttribute("aria-pressed","true");selected=ch;});
+    ch.addEventListener("pointerdown",e=>{
+      const sx=e.clientX,sy=e.clientY;let ghost=null;let over=null;
+      const move=ev=>{if(!ghost&&Math.hypot(ev.clientX-sx,ev.clientY-sy)>6){ghost=ch.cloneNode(true);ghost.classList.add("ghost");document.body.appendChild(ghost);}
+        if(ghost){ghost.style.left=ev.clientX+"px";ghost.style.top=ev.clientY+"px";
+          const el=document.elementFromPoint(ev.clientX,ev.clientY);const t=el&&el.closest("[data-target]");
+          if(over&&over!==t)over.classList.remove("over");if(t){t.classList.add("over");over=t;}}};
+      const up=ev=>{window.removeEventListener("pointermove",move);window.removeEventListener("pointerup",up);
+        if(over)over.classList.remove("over");
+        if(ghost){ghost.remove();ch.dataset.dragged="1";const el=document.elementFromPoint(ev.clientX,ev.clientY);const t=el&&el.closest("[data-target]");if(t)onDrop(ch,t);}};
+      window.addEventListener("pointermove",move);window.addEventListener("pointerup",up);
+    });
+  });
+  return {get:()=>selected,clear:()=>{if(selected)selected.setAttribute("aria-pressed","false");selected=null;}};
+}
+function drawHotspots(ids,glyph){
+  const hs=$("#hotspots"); hs.innerHTML="";
+  ids.forEach((id,i)=>{const [x,y,tx,ty]=ANCHOR[id];
+    const ln=document.createElementNS(svgNS,"line");ln.setAttribute("x1",x);ln.setAttribute("y1",y);ln.setAttribute("x2",tx);ln.setAttribute("y2",ty);ln.setAttribute("stroke","var(--ink)");ln.setAttribute("stroke-width","2");ln.setAttribute("stroke-dasharray","3 3");hs.appendChild(ln);
+    const dot=document.createElementNS(svgNS,"circle");dot.setAttribute("cx",tx);dot.setAttribute("cy",ty);dot.setAttribute("r","3.5");dot.setAttribute("fill","var(--ink)");hs.appendChild(dot);
+    const grp=document.createElementNS(svgNS,"g");grp.setAttribute("class","hot");grp.setAttribute("data-target",id);grp.setAttribute("tabindex","0");grp.setAttribute("role","button");grp.setAttribute("aria-label",(glyph==="🔍"?"افحص ":"مكان رقم ")+(glyph==="🔍"?N[id]:i+1));
+    grp.innerHTML=`<circle cx="${x}" cy="${y}" r="16" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.5"/><text x="${x}" y="${y+5}" text-anchor="middle" font-size="${glyph==="🔍"?13:15}" font-weight="700" fill="var(--ink)">${glyph}</text>`;hs.appendChild(grp);});
+  return hs;
+}
+function onActivate(el,fn){el.addEventListener("click",fn);el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();fn();}});}
+
+function qLabel(q){
+  const items=shuffle(q.targets,variant);
+  $("#game").innerHTML=frame(q,`<div class="chips" id="chips">${items.map(id=>`<button class="chipx" data-id="${id}" aria-pressed="false">${N[id]}</button>`).join("")}</div>`);
+  const hs=drawHotspots(q.targets,"؟"); let left=q.targets.length; const firstTry=new Set(q.targets); setMarks(0,q.targets.length);
+  const place=(chip,target)=>{const want=target.dataset.target, got=chip.dataset.id; if(target.dataset.done)return;
+    if(want===got){record("label",got,"correct");target.dataset.done="1";chip.classList.add("used");chip.setAttribute("aria-pressed","false");
+      const [x,y]=ANCHOR[want];target.innerHTML=`<rect x="${x-34}" y="${y-14}" width="68" height="28" rx="14" fill="var(--leaf)"/><text x="${x}" y="${y+5}" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">${N[want]}</text>`;
+      flash(want,"glow",1100);cap(N[want]+" ✓ بمكانه الصح.","good");left--;setMarks([...firstTry].filter(t=>hs.querySelector(`[data-target="${t}"][data-done]`)).length,q.targets.length);
+      if(left===0)win("سمّيت كل الأجزاء! 🌱");}
+    else{record("label",got,"incorrect");firstTry.delete(got);chip.classList.add("shake");setTimeout(()=>chip.classList.remove("shake"),450);flash(want,"glow",500);cap("هاد مش مكان "+N[got]+". شوف شو الجزء اللي ضوّى.","bad");}};
+  const sel=selectChipLogic($("#chips"),place);
+  hs.querySelectorAll("[data-target]").forEach(t=>onActivate(t,()=>{const c=sel.get();if(c){place(c,t);sel.clear();}}));
+  const H=["الجذر تحت الأرض، والزهرة أعلى إشي.","الثمرة الحمرا على الغصن، والمقطوعة اللي على الأرض فيها بذور.","ضوّيت لك مكان الاسم المختار."];
+  H.onStrong=()=>{const c=sel.get()||$("#chips .chipx:not(.used)");if(c)flash(c.dataset.id,"glow",1600);};
+  bindHint(H);
+}
+
+function qMatch(q){
+  const parts=shuffle(q.pairs.map(p=>p[0]),variant+3); const fns=shuffle(q.pairs.map(p=>p[1]),variant+7);
+  $("#game").innerHTML=frame(q,`<div class="match" id="match"><svg class="lines" id="lines" aria-hidden="true"></svg>
+    <div class="mcol">${parts.map(id=>`<button class="mbtn part" data-p="${id}" aria-pressed="false">${N[id]}</button>`).join("")}</div>
+    <div class="mcol">${fns.map(f=>`<button class="mbtn fn" data-f="${f}" aria-pressed="false">${f}</button>`).join("")}</div></div>`);
+  const panel=$("#game"); const answer=Object.fromEntries(q.pairs); let pick=null; const links=[]; const firstTry=new Set(q.pairs.map(p=>p[0])); let got=0; setMarks(0,q.pairs.length);
+  function draw(){const box=$("#match").getBoundingClientRect();const svg=$("#lines");svg.innerHTML="";
+    links.forEach(([a,b])=>{const ra=a.getBoundingClientRect(),rb=b.getBoundingClientRect();
+      const x1=ra.left-box.left, y1=ra.top+ra.height/2-box.top, x2=rb.right-box.left, y2=rb.top+rb.height/2-box.top;
+      const p=document.createElementNS(svgNS,"path");p.setAttribute("d",`M${x1} ${y1} C${x1-20} ${y1} ${x2+20} ${y2} ${x2} ${y2}`);p.setAttribute("stroke","var(--good)");p.setAttribute("stroke-width","3");p.setAttribute("fill","none");svg.appendChild(p);});}
+  window.onresize=draw; let left=q.pairs.length;
+  panel.querySelectorAll(".mbtn.part").forEach(b=>b.addEventListener("click",()=>{if(b.classList.contains("locked"))return;panel.querySelectorAll(".mbtn.part").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");pick=b;flash(b.dataset.p,"glow",700);}));
+  panel.querySelectorAll(".mbtn.fn").forEach(b=>b.addEventListener("click",()=>{if(!pick||b.classList.contains("locked"))return;const id=pick.dataset.p;
+    if(answer[id]===b.dataset.f){record("match",id,"correct");if(firstTry.has(id))got++;setMarks(got,q.pairs.length);[pick,b].forEach(x=>{x.classList.add("locked");x.setAttribute("aria-pressed","false");});links.push([pick,b]);draw();flash(id,"glow",1100);cap(N[id]+": "+b.dataset.f+" ✓","good");pick=null;left--;if(left===0)win("كل جزء عرف شغلته! 💪");}
+    else{record("match",id,"incorrect");firstTry.delete(id);b.classList.add("shake");setTimeout(()=>b.classList.remove("shake"),450);if(["leaf","root","stem"].includes(id)){wilt(true);setTimeout(()=>wilt(false),900);}cap("مش هاي شغلة "+N[id]+". فكّر: وين موجود؟","bad");}}));
+  const H=["فكّر بمكان كل جزء: اللي تحت الأرض شو بيقدر يعمل؟","الأخضر بيشتغل مع الشمس، واللي تحت الأرض مع المي.","الجذر بيمتص المي. جرّب تبلش فيه."];
+  H.onStrong=()=>{const r=panel.querySelector('.mbtn.part[data-p="root"]:not(.locked)');if(r)r.click();};
+  bindHint(H);
+}
+
+function animateDrop(path,stopAt,done){
+  const d=$("#drop"); d.setAttribute("opacity","1"); let i=0; const seg=path.length-1; const steps=reduce?1:26;
+  function step(){const k=Math.floor(i/steps), t=(i%steps)/steps; if(k>=Math.min(seg,stopAt)){const p=path[Math.min(seg,stopAt)];d.setAttribute("cx",p[0]);d.setAttribute("cy",p[1]);setTimeout(()=>{d.setAttribute("opacity","0");done();},250);return;}
+    const a=path[k],b=path[k+1]; d.setAttribute("cx",a[0]+(b[0]-a[0])*t); d.setAttribute("cy",a[1]+(b[1]-a[1])*t); i++; requestAnimationFrame(step);}
+  step();
+}
+const WATER=[[180,385],[180,300],[180,215],[150,203],[120,200]];
+function qSequence(q){
+  $("#game").innerHTML=frame(q,`<div class="seq">${q.chains.map((c,ci)=>`
+    <div class="chain" data-c="${ci}"><h3>${c.title}</h3>
+      <div class="chips" style="min-height:0;margin-bottom:8px">${shuffle(c.order,variant+ci).map(id=>`<button class="chipx" data-id="${id}" aria-pressed="false">${N[id]}</button>`).join("")}</div>
+      <div class="slots">${c.order.map((_,i)=>`<button class="slot" data-target="${ci}:${i}" aria-label="خانة ${i+1}">${i+1}</button>${i<c.order.length-1?'<span class="arrow">←</span>':''}`).join("")}</div>
+      <div class="row"><button class="btn main" data-run="${ci}" disabled>شغّل</button><button class="btn ghosty" data-clear="${ci}">فضّي</button></div></div>`).join("")}</div>`);
+  const panel=$("#game"); const filled=q.chains.map(c=>Array(c.order.length).fill(null)); const solved=new Set(); const firstRun=q.chains.map(()=>null);
+  const total=q.chains.reduce((a,c)=>a+c.order.length,0); setMarks(0,total);
+  function refresh(ci){const ch=panel.querySelector(`.chain[data-c="${ci}"]`);ch.querySelectorAll(".slot").forEach((s,i)=>{const v=filled[ci][i];s.textContent=v?N[v]:String(i+1);s.className="slot"+(v?" filled":"");});
+    ch.querySelectorAll(".chipx").forEach(c=>c.classList.toggle("used",filled[ci].includes(c.dataset.id)));ch.querySelector("[data-run]").disabled=filled[ci].includes(null);}
+  q.chains.forEach((c,ci)=>{const ch=panel.querySelector(`.chain[data-c="${ci}"]`);
+    const put=(chip,slot)=>{const [cc,i]=slot.dataset.target.split(":").map(Number);if(cc!==ci)return;const id=chip.dataset.id;const at=filled[ci].indexOf(id);if(at>=0)filled[ci][at]=null;filled[ci][i]=id;refresh(ci);};
+    const sel=selectChipLogic(ch,put);
+    ch.querySelectorAll(".chipx").forEach(cb=>cb.addEventListener("click",()=>{if(cb.getAttribute("aria-pressed")==="true"){const i=filled[ci].indexOf(null);if(i>=0){put(cb,ch.querySelectorAll(".slot")[i]);sel.clear();}}}));
+    ch.querySelectorAll(".slot").forEach(s=>s.addEventListener("click",()=>{const cc=sel.get();if(cc){put(cc,s);sel.clear();}else{const i=Number(s.dataset.target.split(":")[1]);filled[ci][i]=null;refresh(ci);}}));
+    ch.querySelector("[data-clear]").addEventListener("click",()=>{filled[ci].fill(null);refresh(ci);resetScene();});
+    ch.querySelector("[data-run]").addEventListener("click",()=>{const order=filled[ci];const nOk=order.filter((x,i)=>x===c.order[i]).length;const firstBad=order.findIndex((x,i)=>x!==c.order[i]);
+      record("sequence",c.order[0],nOk===order.length?"correct":nOk>0?"partial":"incorrect");
+      if(firstRun[ci]===null){firstRun[ci]=nOk;setMarks(firstRun.reduce((a,v)=>a+(v||0),0),total);}
+      const slots=ch.querySelectorAll(".slot");order.forEach((x,i)=>slots[i].classList.add(x===c.order[i]?"ok":"wrong"));
+      resetScene();
+      if(c.effect==="water"){
+        if(firstBad===-1){cap("المي طالعة من الجذر للساق للورقة…");animateDrop(WATER,4,()=>{partEls("leaf").forEach(l=>l.classList.add("glow"));cap("وصلت المي للورقة، والورقة صنعت الغذاء! ✓","good");solved.add(ci);check();});}
+        else{const stop=[1,2,4][Math.max(0,firstBad)]-1;cap("المي بلّشت… بس الطريق انقطع!");animateDrop(WATER,Math.max(1,stop),()=>{wilt(true);cap("المي ما وصلت للورقة فذبلت. صلّح الخانة الحمرا.","bad");});}}
+      else{
+        if(firstBad===-1){cap("الزهرة صارت ثمرة…");flash("flower","glow",700);setTimeout(()=>{flash("fruit","glow",700);cap("الثمرة طلّعت بذور…");},800);setTimeout(()=>{flash("seed","glow",700);cap("والبذرة نبتت! نبتة جديدة ✓","good");$("#sprout").setAttribute("opacity","1");solved.add(ci);check();},reduce?50:1600);}
+        else{partEls(order[0]==="flower"?"fruit":"flower").forEach(p=>p.classList.add("gone"));cap("ما طلع إشي! التكاثر ما بيمشي بهالترتيب. صلّح الخانة الحمرا.","bad");}}
+    });
+  });
+  function check(){if(solved.size===q.chains.length&&!done.has(current))win("شغّلت النبتة كاملة! 🌿");}
+  bindHint(["المي بتيجي من التربة. مين الجزء اللي تحت التربة؟","المي بتطلع من تحت لفوق، والثمرة بتطلع من الزهرة.","أول خانة برحلة المي: الجذر. وأول خانة بالتكاثر: الزهرة."]);
+}
+
+function qPredict(q){
+  let k=0,got=0; setMarks(0,q.scenarios.length);
+  function show(){const s=q.scenarios[k];resetScene();
+    $("#game").innerHTML=frame(q,`<h3 style="font-size:1.05rem;margin-bottom:10px">${s.q} <span class="small">(${k+1} من ${q.scenarios.length})</span></h3>
+      <div class="opts">${s.options.map((o,i)=>`<button class="opt" data-i="${i}">${o}</button>`).join("")}</div>
+      <div class="why" id="why"></div><div class="row"><button class="btn main" id="next" style="display:none">${k<q.scenarios.length-1?"السؤال الجاي":"خلصت"}</button></div>`);
+    setMarks(got,q.scenarios.length); let answered=false; const panel=$("#game");
+    panel.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{if(answered)return;answered=true;const i=Number(b.dataset.i);const ok=i===s.answer;
+      record("predict",s.remove,ok?"correct":"incorrect");if(ok)got++;setMarks(got,q.scenarios.length);
+      b.classList.add(ok?"right":"nope");panel.querySelector(`.opt[data-i="${s.answer}"]`).classList.add("right");
+      partEls(s.remove).forEach(p=>p.classList.add("gone"));cap("بنجرب: شلنا "+N[s.remove]+"…");
+      setTimeout(()=>{if(s.remove==="flower"){partEls("fruit").forEach(p=>p.classList.add("gone"));partEls("seed").forEach(p=>p.classList.add("gone"));}else{wilt(true);}
+        cap(ok?"توقعك صح! ✓":"شوف شو صار فعلاً على النبتة.",ok?"good":"bad");
+        const w=$("#why");w.innerHTML=`<b>ليش؟</b> بالجراف: ${s.edge.map(x=>N[x]).join(" ← ")}. كل جزء محتاج اللي قبله.`;w.classList.add("show");$("#next").style.display="";},reduce?50:700);}));
+    $("#next").addEventListener("click",()=>{k++;if(k<q.scenarios.length)show();else{resetScene();win("صرت تتوقع شو بيصير للنبتة قبل ما يصير! 🔬");}});
+    bindHint(["فكّر: هالجزء شو بيعطي للأجزاء اللي فوقه؟","تذكّر رحلة المي ورحلة التكاثر.","الجواب الصح هو اللي فيه سبب، مش بس نتيجة."]);
+  }
+  show();
+}
+
+function qDiagnose(q){
+  const c=q.cases[(variant-1)%q.cases.length]; const inspected=new Set(); let tries=0;
+  $("#game").innerHTML=frame(q,`<p class="small" id="clues">لسا ما فحصت ولا جزء.</p>
+    <h3 style="font-size:1rem;margin:10px 0 8px">الجزء اللي لازم نصلّحه:</h3>
+    <div class="opts">${["root","stem","leaf","flower"].map(id=>`<button class="opt" data-p="${id}">${N[id]}</button>`).join("")}</div>`);
+  setMarks(0,2); resetScene(); wilt(true); cap("هالنبتة ذبلانة! افحصها بالعدسة 🔍.","bad");
+  const hs=drawHotspots(["root","stem","leaf","flower"],"🔍");
+  hs.querySelectorAll("[data-target]").forEach(t=>onActivate(t,()=>{const id=t.dataset.target;inspected.add(id);
+    const txt=c.clue[id];cap(N[id]+": "+txt,id===c.broken?"bad":"");if(id===c.broken)mark(id,true);flash(id,"glow",700);
+    $("#clues").innerHTML="فحصت: "+[...inspected].map(x=>N[x]).join("، ");}));
+  const panel=$("#game");
+  panel.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{if(panel.dataset.solved)return;tries++;const id=b.dataset.p;
+    if(id===c.broken){panel.dataset.solved="1";record("diagnose",id,"correct");setMarks(tries===1?2:1,2);b.classList.add("right");mark(id,false);
+      cap("صلّحنا "+N[id]+"… المي رجعت تطلع!");animateDrop(WATER,4,()=>{wilt(false);partEls("leaf").forEach(l=>l.classList.add("glow"));win("رجعت النبتة تعيش! شخّصت المشكلة صح 🩺");});}
+    else{record("diagnose",c.broken,"incorrect");b.classList.add("nope");cap(id==="leaf"?"الورقة ذبلانة، بس هي النتيجة مش السبب. ارجع لورا بطريق المي.":N[id]+" سليم. افحص الأجزاء اللي قبل الورقة.","bad");}}));
+  bindHint(["الورقة ذبلانة يعني المي ما وصلت. من وين المي بتيجي؟","افحص طريق المي من تحت لفوق: الجذر، بعدين الساق.","أول جزء فيه علامة حمرا لما تفحصه هو المشكلة."]);
+}
+
+function qSandbox(q){
+  const vals={}; q.factors.forEach(f=>vals[f.id]=f.start); let tries=0;
+  $("#game").innerHTML=frame(q,`<div class="sliders">${q.factors.map(f=>`<label class="sl"><span>${f.label}</span><input type="range" min="${f.min}" max="${f.max}" step="1" value="${f.start}" data-f="${f.id}" aria-label="${f.label}"><output id="o-${f.id}">${f.start}</output></label>`).join("")}</div>
+    <div class="status" id="status"></div><div class="row"><button class="btn main" id="tryBtn">جرّب</button></div>`);
+  setMarks(0,q.factors.length);
+  const state=f=>vals[f.id]<f.ok[0]?"low":vals[f.id]>f.ok[1]?"high":"ok";
+  function paint(){resetScene();const sun=q.factors[0],water=q.factors[1];
+    if(state(water)==="low")wilt(true);
+    if(state(water)==="high"){partEls("root").forEach(p=>p.classList.add("rot"));partEls("leaf").forEach(p=>p.classList.add("pale"));}
+    if(state(sun)==="low")partEls("leaf").forEach(p=>p.classList.add("pale"));
+    partEls("fruit").forEach(p=>p.classList.add("gone"));partEls("seed").forEach(p=>p.classList.add("gone"));
+    $("#status").innerHTML=q.factors.map(f=>{const st=state(f);return `<span class="${st==="ok"?"okk":"bad"}">${f.label}: ${st==="ok"?"مضبوط":st==="low"?"قليل":"كثير"}</span>`;}).join("");}
+  $("#game").querySelectorAll("input[type=range]").forEach(inp=>inp.addEventListener("input",()=>{vals[inp.dataset.f]=Number(inp.value);$("#o-"+inp.dataset.f).textContent=inp.value;paint();}));
+  paint(); cap("النبتة مش مبسوطة… اضبط الأشرطة.","bad");
+  $("#tryBtn").addEventListener("click",()=>{if($("#game").dataset.solved)return;tries++;
+    const states=q.factors.map(state); const nOk=states.filter(s=>s==="ok").length;
+    q.factors.forEach((f,i)=>record("sandbox",q.edges[f.id][q.edges[f.id].length-1],states[i]==="ok"?"correct":"incorrect"));
+    if(tries===1)setMarks(nOk,q.factors.length);
+    if(nOk===q.factors.length){$("#game").dataset.solved="1";resetScene();cap("الزهرة اتلقّحت…");flash("flower","glow",700);
+      setTimeout(()=>{partEls("fruit").forEach(p=>p.classList.remove("gone"));flash("fruit","glow",700);cap("صارت ثمرة…");},reduce?10:800);
+      setTimeout(()=>{partEls("seed").forEach(p=>p.classList.remove("gone"));flash("seed","glow",700);$("#sprout").setAttribute("opacity","1");win("النبتة طلّعت بذور، والبذرة نبتت! 🌻");},reduce?20:1600);}
+    else{const f=q.factors[states.findIndex(s=>s!=="ok")];const st=state(f);cap((st==="low"?f.low:f.high)+" جرّب مرة ثانية.","bad");}});
+  bindHint(["فكّر بكل عامل لحاله: شو بيعمل للنبتة؟","المي لازم تكون بالنص، مش قليلة ولا كثيرة. والشمس كثيرة.","الزهرة ما بتصير ثمرة بدون حشرات تلقّحها."]);
+}
+
+function qReview(){
+  const items=[...reviewQueue]; const pairs=Object.fromEntries(Q.find(q=>q.template==="match").pairs);
+  const q={title:"مراجعة الأخطاء",difficulty:"mid",question:items.length?"الأسئلة اللي غلطت فيها رجعتلك. جرّب مرة ثانية.":"ما في أخطاء ترجعلها! 🎉",how:"بالسكربت (١٢.٣): المراجعة بترجع للنقاط اللي بدها شغل، مش لأول الدرس.",solution:["الغلط مش نهاية: هو إشارة وين لازم نركّز.","كل سؤال صحّحته هون بيرفع إتقانك لهالجزء."]};
+  curQ=q; let k=0,got=0;
+  function show(){ if(!items.length){$("#game").innerHTML=frame(q,"");setMarks(0,0);bindHint(["ارجع لأي لعبة وجرّب «نسخة ثانية».","",""]);return;}
+    const id=items[k]; const opts=shuffle([pairs[id],...shuffle(Object.keys(pairs).filter(x=>x!==id),variant+k).slice(0,2).map(x=>pairs[x])],variant+k+11);
+    $("#game").innerHTML=frame(q,`<h3 style="font-size:1.05rem;margin-bottom:10px">شو شغلة ${N[id]}؟ <span class="small">(${k+1} من ${items.length})</span></h3><div class="opts">${opts.map(o=>`<button class="opt" data-o="${o}">${o}</button>`).join("")}</div><div class="row"><button class="btn main" id="next" style="display:none">${k<items.length-1?"الجاي":"خلصت"}</button></div>`);
+    setMarks(got,items.length); flash(id,"glow",1200); let ans=false; const panel=$("#game");
+    panel.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{if(ans)return;ans=true;const ok=b.dataset.o===pairs[id];record("review",id,ok?"correct":"incorrect");if(ok){got++;reviewQueue.delete(id);}
+      setMarks(got,items.length);b.classList.add(ok?"right":"nope");panel.querySelector(`.opt[data-o="${pairs[id]}"]`).classList.add("right");cap(ok?"صح! "+N[id]+" طلع من المراجعة ✓":"لسا، رح يرجعلك المرة الجاية.",ok?"good":"bad");$("#next").style.display="";}));
+    $("#next").addEventListener("click",()=>{k++;if(k<items.length)show();else win("خلصت المراجعة! 💚");});
+    bindHint(["فكّر وين الجزء موجود بالنبتة.","ارجع لحل لعبة «وصّل الجزء بشغلته».",""]);
+  }
+  show();
+}
+
+function win(msg){done.add(current);renderSteps();cap(msg,"good");showSolution(curQ);
+  const r=document.createElement("div");r.className="row";const last=current>=STEPS.length-1;
+  r.innerHTML=(last?`<button class="btn main" id="goMas">شوف الإتقان</button>`:`<button class="btn main" id="goNext">${current===Q.length-1?"المراجعة":"السؤال الجاي"}</button>`)+(STEPS[current].tpl!=="review"?`<button class="btn ghosty" id="again">نسخة ثانية من نفس السؤال</button>`:"");
+  $("#game").appendChild(r);
+  const n=$("#goNext");if(n)n.addEventListener("click",()=>open(current+1));const m=$("#goMas");if(m)m.addEventListener("click",()=>{selTab("mas");$("#below").scrollIntoView({behavior:reduce?"auto":"smooth"});});
+  const a=$("#again");if(a)a.addEventListener("click",()=>{variant++;open(current);});
+}
+
+/* ===== 7. Navigation ===== */
+const STEPS=Q.map(q=>({title:q.title,tpl:q.template})).concat([{title:"مراجعة الأخطاء",tpl:"review"}]);
+function renderSteps(){$("#steps").innerHTML=STEPS.map((s,i)=>`<button class="step${done.has(i)?" done":""}${s.tpl==="review"&&reviewQueue.size?" review":""}" ${i===current?'aria-current="step"':""} data-i="${i}"><span class="dot"></span>${s.title}${s.tpl==="review"&&reviewQueue.size?" ("+reviewQueue.size+")":""}</button>`).join("");
+  $("#steps").querySelectorAll(".step").forEach(b=>b.addEventListener("click",()=>open(Number(b.dataset.i))));}
+function open(i){current=i;window.onresize=null;resetScene();timer.begin();delete $("#game").dataset.solved;
+  const s=STEPS[i]; if(s.tpl==="review"){renderSteps();cap("مراجعة: النقاط اللي بدها شغل.");qReview();return;}
+  const q=Q[i]; curQ=q; renderSteps(); cap(q.title+": "+q.question);
+  ({label:qLabel,match:qMatch,sequence:qSequence,predict:qPredict,diagnose:qDiagnose,sandbox:qSandbox})[q.template](q);}
+
+/* ===== 8. Below: evidence, generation, mastery ===== */
+let tab="ev";
+function selTab(t){tab=t;document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",String(b.dataset.t===t)));renderBelow();}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>selTab(b.dataset.t)));
+function renderBelow(){const box=$("#below");
+  if(tab==="ev"){const last=evidence[evidence.length-1];
+    box.innerHTML=`<p class="small">كل محاولة بتطلع سجل دليل بنفس شكل المعمارية (ص١١)، ومعه <b>صعوبة السؤال</b>. الوقت <b>فعلي</b>: بيوقف لما تطلع من الصفحة. عدد السجلات: <b>${evidence.length}</b> · بالمراجعة: <b>${reviewQueue.size}</b>.</p>
+      <div class="code">${last?JSON.stringify(last,null,2):"// لسا ما في أدلة. جرّب أي سؤال."}</div>`;}
+  else if(tab==="gen"){const ch=validate();
+    box.innerHTML=`<div class="flow"><span>الجراف</span><span>←</span><span>درس: plant_parts</span><span>←</span><span>الموديل بيعبّي JSON مقفول</span><span>←</span><span>الكود بيفحص</span><span>←</span><span>القوالب بترسم</span></div>
+      <ul class="checks">${ch.map(([t,ok])=>`<li style="${ok?"":"color:var(--bad)"}">${t}${ok?"":" ✗"}</li>`).join("")}</ul>
+      <p class="small">٦ قوالب ثابتة ومفحوصة، والموديل بيعبّي بيانات بس: الأسئلة والخيارات والحل خطوة خطوة.</p>
+      <div class="code">${JSON.stringify(SPEC,null,2).replace(/</g,"&lt;")}</div>`;}
+  else{box.innerHTML=`<p class="small">الإتقان لكل جزء من أدلة الأسئلة، بمعادلة عبد الرحمن ٧ (EMA، β = 0.2). البداية 0.5. الجزئي بينحسب نص، والصح بعد تلميح قوي (H2) نص، والسهل وزنه 0.8.</p>
+      <div class="bars">${Object.keys(N).map(k=>`<div class="bar"><span>${N[k]}</span><div class="t"><i style="width:${Math.round(mastery[k].M*100)}%"></i></div><span class="n">${mastery[k].M.toFixed(2)}</span></div>`).join("")}</div>`;}
+}
+
+renderSteps(); open(0); renderBelow();
+})();
+
+</script>
+</body>
+</html>

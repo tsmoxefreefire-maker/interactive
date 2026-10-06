@@ -1,0 +1,399 @@
+{
+  "book_id": "sci_g4",
+  "unit_id": "u_plants",
+  "topic_id": "t_lifecycle",
+  "lesson_id": "l_cycle",
+  "lesson_title": "من البذرة إلى النبتة",
+  "lesson_minutes": 15,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "garden",
+  "icons": {
+    "root": "🫚",
+    "stem": "🌿",
+    "leaf": "🍃",
+    "flower": "🌸",
+    "fruit": "🍎",
+    "seed": "🌰",
+    "water": "💧",
+    "sunlight": "☀️",
+    "air": "💨",
+    "soil": "🟫",
+    "germination": "🌱",
+    "pollination": "🐝",
+    "seed_dispersal": "🌬️"
+  },
+  "coverage": {
+    "concepts": 3,
+    "ready": 3,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 12,
+  "concepts": [
+    {
+      "concept_id": "pollination",
+      "title": "التلقيح",
+      "difficulty": "hard",
+      "minutes": 6,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «التلقيح»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "التلقيح: انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح"
+          ],
+          "concepts": [
+            "pollination"
+          ],
+          "target": "pollination",
+          "options": [
+            "انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح",
+            "أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران",
+            "توجد داخل الثمرة، ويمكن أن تنمو لتصبح نبتة جديدة",
+            "انتقال البذور بعيداً عن النبتة الأم بالرياح أو الحيوانات أو الماء"
+          ],
+          "answer": "انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح"
+        },
+        {
+          "template": "predict",
+          "difficulty": "mid",
+          "question": "شو بيصير لو اختفى «التلقيح»؟",
+          "how": "توقّع أول، وبعدين شوف شو بيصير للباقين.",
+          "solution": [
+            "«الثمرة» بتحتاج «التلقيح»",
+            "«البذرة» بتحتاج «الثمرة»",
+            "«الإنبات» بيحتاج «البذرة»",
+            "«الجذر» ما بيحتاج «التلقيح»، فما بيتأثر."
+          ],
+          "concepts": [
+            "pollination",
+            "fruit",
+            "seed",
+            "germination"
+          ],
+          "target": "pollination",
+          "options": [
+            "ما في إشي بيتأثر، كل واحد لحاله",
+            "بس «الجذر» بيتأثر",
+            "«الإنبات» بيصير أقوى",
+            "«الثمرة» ثم «البذرة» ثم «الإنبات» بيتأثروا، لأنه كل واحد بيحتاج اللي قبله"
+          ],
+          "answer": 3,
+          "affected": [
+            "fruit",
+            "seed",
+            "germination"
+          ],
+          "unaffected": [
+            "root"
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «التلقيح»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «التلقيح»: الزهرة",
+            "بعد «التلقيح»: الثمرة، البذرة، الإنبات"
+          ],
+          "concepts": [
+            "pollination",
+            "flower",
+            "fruit",
+            "seed",
+            "germination"
+          ],
+          "target": "pollination",
+          "before": [
+            "flower"
+          ],
+          "after": [
+            "fruit",
+            "seed",
+            "germination"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «التلقيح»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الإنبات» مش من السلسلة، مكانه «الثمرة»",
+            "الزهرة ← التلقيح ← الثمرة"
+          ],
+          "concepts": [
+            "pollination",
+            "flower",
+            "fruit"
+          ],
+          "target": "pollination",
+          "chain": [
+            "flower",
+            "pollination",
+            "fruit"
+          ],
+          "wrong_index": 2,
+          "wrong": "germination",
+          "options": [
+            "air",
+            "seed_dispersal",
+            "fruit"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "germination",
+      "title": "الإنبات",
+      "difficulty": "medium",
+      "minutes": 5,
+      "questions": [
+        {
+          "template": "match",
+          "difficulty": "easy",
+          "question": "وصّل «الإنبات» وجيرانه بمعانيهم",
+          "how": "اسحب خط من كل مفهوم لمعناه (أو اكبس على المفهوم وبعدين على المعنى).",
+          "solution": [
+            "الإنبات: أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران",
+            "البذرة: توجد داخل الثمرة، ويمكن أن تنمو لتصبح نبتة جديدة",
+            "التلقيح: انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح"
+          ],
+          "concepts": [
+            "germination",
+            "seed",
+            "pollination"
+          ],
+          "target": "germination",
+          "pairs": [
+            [
+              "germination",
+              "أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران"
+            ],
+            [
+              "seed",
+              "توجد داخل الثمرة، ويمكن أن تنمو لتصبح نبتة جديدة"
+            ],
+            [
+              "pollination",
+              "انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح"
+            ]
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الإنبات»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«التلقيح» مش من السلسلة، مكانه «الثمرة»",
+            "الثمرة ← البذرة ← الإنبات"
+          ],
+          "concepts": [
+            "germination",
+            "fruit",
+            "seed"
+          ],
+          "target": "germination",
+          "chain": [
+            "fruit",
+            "seed",
+            "germination"
+          ],
+          "wrong_index": 0,
+          "wrong": "pollination",
+          "options": [
+            "fruit",
+            "seed_dispersal",
+            "root"
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «الإنبات»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "البذرة لازم قبل الإنبات"
+          ],
+          "concepts": [
+            "germination",
+            "seed"
+          ],
+          "target": "germination",
+          "correct": [
+            "seed"
+          ],
+          "options": [
+            "water",
+            "seed",
+            "soil",
+            "seed_dispersal"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «من البذرة إلى النبتة» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«ضوء الشمس»: تستخدمه الورقة لصنع الغذاء، فهو من «حاجات النبات»، مش من «من البذرة إلى النبتة».",
+            "أما «من البذرة إلى النبتة»: الإنبات، التلقيح، انتشار البذور."
+          ],
+          "concepts": [
+            "germination",
+            "pollination",
+            "seed_dispersal"
+          ],
+          "target": "germination",
+          "family": [
+            "germination",
+            "pollination",
+            "seed_dispersal"
+          ],
+          "intruder": "sunlight",
+          "intros": {
+            "germination": "أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران",
+            "pollination": "انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح",
+            "seed_dispersal": "انتقال البذور بعيداً عن النبتة الأم بالرياح أو الحيوانات أو الماء",
+            "sunlight": "تستخدمه الورقة لصنع الغذاء"
+          }
+        }
+      ]
+    },
+    {
+      "concept_id": "seed_dispersal",
+      "title": "انتشار البذور",
+      "difficulty": "medium",
+      "minutes": 4,
+      "questions": [
+        {
+          "template": "true_false",
+          "difficulty": "easy",
+          "question": "صح ولا غلط؟ عن «انتشار البذور»",
+          "how": "طعمي كل جملة للوحش الصح: «صح» ولا «غلط» (اسحبها لتمّه أو اكبس عليه).",
+          "solution": [
+            "❌ «انتشار البذور»: انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح ← هاد «التلقيح» مش «انتشار البذور»",
+            "❌ «انتشار البذور»: أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران ← هاد «الإنبات» مش «انتشار البذور»",
+            "✅ «انتشار البذور»: انتقال البذور بعيداً عن النبتة الأم بالرياح أو الحيوانات أو الماء",
+            "❌ «انتشار البذور»: يأخذ النبات منه غازاً يحتاجه لصنع الغذاء ← هاد «الهواء» مش «انتشار البذور»"
+          ],
+          "concepts": [
+            "seed_dispersal"
+          ],
+          "target": "seed_dispersal",
+          "statements": [
+            {
+              "text": "«انتشار البذور»: انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح",
+              "answer": false
+            },
+            {
+              "text": "«انتشار البذور»: أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران",
+              "answer": false
+            },
+            {
+              "text": "«انتشار البذور»: انتقال البذور بعيداً عن النبتة الأم بالرياح أو الحيوانات أو الماء",
+              "answer": true
+            },
+            {
+              "text": "«انتشار البذور»: يأخذ النبات منه غازاً يحتاجه لصنع الغذاء",
+              "answer": false
+            }
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «انتشار البذور»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "البذرة لازم قبل انتشار البذور"
+          ],
+          "concepts": [
+            "seed_dispersal",
+            "seed"
+          ],
+          "target": "seed_dispersal",
+          "correct": [
+            "seed"
+          ],
+          "options": [
+            "water",
+            "seed",
+            "air",
+            "germination"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «من البذرة إلى النبتة» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«الساق»: يحمل النبتة، فهو من «أجزاء النبات»، مش من «من البذرة إلى النبتة».",
+            "أما «من البذرة إلى النبتة»: انتشار البذور، الإنبات، التلقيح."
+          ],
+          "concepts": [
+            "seed_dispersal",
+            "germination",
+            "pollination"
+          ],
+          "target": "seed_dispersal",
+          "family": [
+            "seed_dispersal",
+            "germination",
+            "pollination"
+          ],
+          "intruder": "stem",
+          "intros": {
+            "seed_dispersal": "انتقال البذور بعيداً عن النبتة الأم بالرياح أو الحيوانات أو الماء",
+            "germination": "أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران",
+            "pollination": "انتقال حبوب اللقاح بين الأزهار بمساعدة الحشرات أو الرياح",
+            "stem": "يحمل النبتة"
+          }
+        },
+        {
+          "template": "sequence",
+          "difficulty": "mid",
+          "question": "ابنِ جسر «انتشار البذور»",
+          "how": "ركّب قطع الجسر بالترتيب من الأساس (اسحب أو اكبس)، وبعدين «🚗 يلا!» وخلّي البذرة تقطع.",
+          "solution": [
+            "الثمرة قبل البذرة",
+            "البذرة قبل انتشار البذور"
+          ],
+          "concepts": [
+            "seed_dispersal",
+            "fruit",
+            "seed"
+          ],
+          "target": "seed_dispersal",
+          "order": [
+            "fruit",
+            "seed",
+            "seed_dispersal"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "who_am_i(pollination): the meaning is too short for 2+ clues",
+    "adjust(pollination): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "unlocks(germination): nothing comes after it",
+    "sort(germination): needs concepts both before and after it",
+    "who_am_i(germination): the meaning is too short for 2+ clues",
+    "predict(germination): nothing needs it",
+    "adjust(germination): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "unlocks(seed_dispersal): nothing comes after it",
+    "sort(seed_dispersal): needs concepts both before and after it",
+    "who_am_i(seed_dispersal): the meaning is too short for 2+ clues",
+    "predict(seed_dispersal): nothing needs it",
+    "adjust(seed_dispersal): not a numeric subject (memorise/understand lessons do not get number sliders)"
+  ],
+  "art": {}
+}

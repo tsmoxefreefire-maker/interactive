@@ -1,0 +1,65 @@
+{
+  "source_graph": "history_book_graph.json",
+  "generated_on": "2026-10-06",
+  "lessons": [
+    {
+      "lesson_id": "l1",
+      "title": "الفراعنة وآثارهم",
+      "unit_id": "u",
+      "topic_id": "t",
+      "lesson_minutes": 0,
+      "questions": 12,
+      "concepts": {
+        "pharaohs": 4,
+        "pyramids": 4,
+        "writing": 4
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "adjust(pharaohs): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "unlocks(pyramids): nothing comes after it",
+        "sort(pyramids): needs concepts both before and after it",
+        "who_am_i(pyramids): the meaning is too short for 2+ clues",
+        "predict(pyramids): nothing needs it",
+        "adjust(pyramids): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "spell(writing): no meaning or the name is too short/long",
+        "unlocks(writing): nothing comes after it",
+        "sort(writing): needs concepts both before and after it",
+        "who_am_i(writing): the meaning is too short for 2+ clues",
+        "predict(writing): nothing needs it",
+        "adjust(writing): not a numeric subject (memorise/understand lessons do not get number sliders)"
+      ]
+    },
+    {
+      "lesson_id": "l2",
+      "title": "الحياة حول النيل",
+      "unit_id": "u",
+      "topic_id": "t",
+      "lesson_minutes": 0,
+      "questions": 12,
+      "concepts": {
+        "nile": 4,
+        "farming": 4,
+        "trade": 4
+      },
+      "coverage_percent": 100,
+      "status": "needs_review",
+      "warnings": [
+        "prereq(nile): nothing comes before it",
+        "unlocks(nile): not enough wrong roads",
+        "sort(nile): needs concepts both before and after it",
+        "predict(nile): no unrelated concept to compare with",
+        "adjust(nile): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "sort(farming): needs concepts both before and after it",
+        "who_am_i(farming): the meaning is too short for 2+ clues",
+        "adjust(farming): not a numeric subject (memorise/understand lessons do not get number sliders)",
+        "unlocks(trade): nothing comes after it",
+        "sort(trade): needs concepts both before and after it",
+        "who_am_i(trade): the meaning is too short for 2+ clues",
+        "predict(trade): nothing needs it",
+        "adjust(trade): not a numeric subject (memorise/understand lessons do not get number sliders)"
+      ]
+    }
+  ]
+}

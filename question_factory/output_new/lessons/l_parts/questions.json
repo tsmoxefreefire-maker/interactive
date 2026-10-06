@@ -1,0 +1,759 @@
+{
+  "book_id": "sci_g4",
+  "unit_id": "u_plants",
+  "topic_id": "t_structure",
+  "lesson_id": "l_parts",
+  "lesson_title": "أجزاء النبات",
+  "lesson_minutes": 23,
+  "generator": "offline",
+  "status": "needs_review",
+  "theme": "garden",
+  "icons": {
+    "root": "🫚",
+    "stem": "🌿",
+    "leaf": "🍃",
+    "flower": "🌸",
+    "fruit": "🍎",
+    "seed": "🌰",
+    "water": "💧",
+    "sunlight": "☀️",
+    "air": "💨",
+    "soil": "🟫",
+    "germination": "🌱",
+    "pollination": "🐝",
+    "seed_dispersal": "🌬️"
+  },
+  "coverage": {
+    "concepts": 6,
+    "ready": 6,
+    "missing": [],
+    "percent": 100,
+    "min_per_concept": 2
+  },
+  "question_count": 24,
+  "concepts": [
+    {
+      "concept_id": "flower",
+      "title": "الزهرة",
+      "difficulty": "medium",
+      "minutes": 4,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «الزهرة»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "الزهرة: جزء مسؤول عن التكاثر، ويتحوّل إلى ثمرة بعد التلقيح"
+          ],
+          "concepts": [
+            "flower"
+          ],
+          "target": "flower",
+          "options": [
+            "جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء",
+            "جزء مسؤول عن التكاثر، ويتحوّل إلى ثمرة بعد التلقيح",
+            "الجزء تحت الأرض؛ يثبّت النبتة ويمتص الماء والأملاح من التربة",
+            "تنمو من الزهرة وتحمي البذور التي بداخلها"
+          ],
+          "answer": "جزء مسؤول عن التكاثر، ويتحوّل إلى ثمرة بعد التلقيح"
+        },
+        {
+          "template": "predict",
+          "difficulty": "mid",
+          "question": "شو بيصير لو اختفى «الزهرة»؟",
+          "how": "توقّع أول، وبعدين شوف شو بيصير للباقين.",
+          "solution": [
+            "«التلقيح» بيحتاج «الزهرة»",
+            "«الثمرة» بتحتاج «التلقيح»",
+            "«البذرة» بتحتاج «الثمرة»",
+            "«الورقة» ما بتحتاج «الزهرة»، فما بتتأثر."
+          ],
+          "concepts": [
+            "flower",
+            "pollination",
+            "fruit",
+            "seed"
+          ],
+          "target": "flower",
+          "options": [
+            "«البذرة» بتصير أقوى",
+            "بس «الورقة» بتتأثر",
+            "ما في إشي بيتأثر، كل واحد لحاله",
+            "«التلقيح» ثم «الثمرة» ثم «البذرة» بيتأثروا، لأنه كل واحد بيحتاج اللي قبله"
+          ],
+          "answer": 3,
+          "affected": [
+            "pollination",
+            "fruit",
+            "seed"
+          ],
+          "unaffected": [
+            "leaf"
+          ]
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «أجزاء النبات». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الزهرة»: جزء مسؤول عن التكاثر، ويتحوّل إلى ثمرة بعد التلقيح"
+          ],
+          "concepts": [
+            "flower"
+          ],
+          "target": "flower",
+          "clues": [
+            "يتحوّل إلى ثمرة بعد التلقيح",
+            "جزء مسؤول عن التكاثر"
+          ],
+          "options": [
+            "root",
+            "fruit",
+            "stem",
+            "flower"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الزهرة»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«الساق» مش من السلسلة، مكانه «التلقيح»",
+            "الزهرة ← التلقيح ← الثمرة"
+          ],
+          "concepts": [
+            "flower",
+            "pollination",
+            "fruit"
+          ],
+          "target": "flower",
+          "chain": [
+            "flower",
+            "pollination",
+            "fruit"
+          ],
+          "wrong_index": 1,
+          "wrong": "stem",
+          "options": [
+            "pollination",
+            "leaf",
+            "seed"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "root",
+      "title": "الجذر",
+      "difficulty": "easy",
+      "minutes": 4,
+      "questions": [
+        {
+          "template": "match",
+          "difficulty": "easy",
+          "question": "وصّل «الجذر» وجيرانه بمعانيهم",
+          "how": "اسحب خط من كل مفهوم لمعناه (أو اكبس على المفهوم وبعدين على المعنى).",
+          "solution": [
+            "الجذر: الجزء تحت الأرض؛ يثبّت النبتة ويمتص الماء والأملاح من التربة",
+            "التربة: تثبّت الجذر وتعطيه الماء والأملاح",
+            "الماء: يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه"
+          ],
+          "concepts": [
+            "root",
+            "soil",
+            "water"
+          ],
+          "target": "root",
+          "pairs": [
+            [
+              "root",
+              "الجزء تحت الأرض؛ يثبّت النبتة ويمتص الماء والأملاح من التربة"
+            ],
+            [
+              "soil",
+              "تثبّت الجذر وتعطيه الماء والأملاح"
+            ],
+            [
+              "water",
+              "يمتصه الجذر وينقله الساق، ويحتاجه النبات ليصنع غذاءه"
+            ]
+          ]
+        },
+        {
+          "template": "who_am_i",
+          "difficulty": "mid",
+          "question": "مين أنا؟ 🕵️",
+          "how": "أنا مفهوم من درس «أجزاء النبات». اقرأ التلميح واحزر مين أنا! كل تلميح زيادة بيكلّفك نجمة ⭐.",
+          "solution": [
+            "أنا «الجذر»: الجزء تحت الأرض؛ يثبّت النبتة ويمتص الماء والأملاح من التربة"
+          ],
+          "concepts": [
+            "root"
+          ],
+          "target": "root",
+          "clues": [
+            "يثبّت النبتة",
+            "يمتص الماء والأملاح من التربة",
+            "الجزء تحت الأرض"
+          ],
+          "options": [
+            "flower",
+            "root",
+            "leaf",
+            "stem"
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «الجذر»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «الجذر»: التربة، الماء",
+            "بعد «الجذر»: الساق، الورقة"
+          ],
+          "concepts": [
+            "root",
+            "soil",
+            "water",
+            "stem",
+            "leaf"
+          ],
+          "target": "root",
+          "before": [
+            "soil",
+            "water"
+          ],
+          "after": [
+            "stem",
+            "leaf"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الجذر»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«البذرة» مش من السلسلة، مكانه «الساق»",
+            "التربة ← الجذر ← الساق"
+          ],
+          "concepts": [
+            "root",
+            "soil",
+            "stem"
+          ],
+          "target": "root",
+          "chain": [
+            "soil",
+            "root",
+            "stem"
+          ],
+          "wrong_index": 2,
+          "wrong": "seed",
+          "options": [
+            "stem",
+            "leaf",
+            "flower"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "stem",
+      "title": "الساق",
+      "difficulty": "easy",
+      "minutes": 4,
+      "questions": [
+        {
+          "template": "true_false",
+          "difficulty": "easy",
+          "question": "صح ولا غلط؟ عن «الساق»",
+          "how": "طعمي كل جملة للوحش الصح: «صح» ولا «غلط» (اسحبها لتمّه أو اكبس عليه).",
+          "solution": [
+            "✅ «الساق»: يحمل النبتة",
+            "❌ «الساق»: جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء ← هاد «الورقة» مش «الساق»",
+            "❌ «الساق»: يمكن أن تنمو لتصبح نبتة جديدة ← هاد «البذرة» مش «الساق»",
+            "✅ «الساق»: ينقل الماء من الجذر إلى الأوراق والغذاء من الأوراق لباقي النبتة"
+          ],
+          "concepts": [
+            "stem"
+          ],
+          "target": "stem",
+          "statements": [
+            {
+              "text": "«الساق»: يحمل النبتة",
+              "answer": true
+            },
+            {
+              "text": "«الساق»: جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء",
+              "answer": false
+            },
+            {
+              "text": "«الساق»: يمكن أن تنمو لتصبح نبتة جديدة",
+              "answer": false
+            },
+            {
+              "text": "«الساق»: ينقل الماء من الجذر إلى الأوراق والغذاء من الأوراق لباقي النبتة",
+              "answer": true
+            }
+          ]
+        },
+        {
+          "template": "sort",
+          "difficulty": "mid",
+          "question": "مصعد «الساق»: مين قبله ومين بعده؟",
+          "how": "حط كل مفهوم بطابق: تحت = قبله، فوق = بعده. لما تخلص اكبس «ثبّت 🔒».",
+          "solution": [
+            "قبل «الساق»: الجذر، التربة، الماء",
+            "بعد «الساق»: الورقة"
+          ],
+          "concepts": [
+            "stem",
+            "root",
+            "soil",
+            "water",
+            "leaf"
+          ],
+          "target": "stem",
+          "before": [
+            "root",
+            "soil",
+            "water"
+          ],
+          "after": [
+            "leaf"
+          ]
+        },
+        {
+          "template": "fix_chain",
+          "difficulty": "mid",
+          "question": "في عربة غلط بقطار «الساق»!",
+          "how": "العربات بالترتيب: كل عربة بتيجي بعد اللي قدامها. لاقي الغلط واكبس عليها، وبعدين حط الصح مكانها.",
+          "solution": [
+            "«البذرة» مش من السلسلة، مكانه «الورقة»",
+            "الجذر ← الساق ← الورقة"
+          ],
+          "concepts": [
+            "stem",
+            "root",
+            "leaf"
+          ],
+          "target": "stem",
+          "chain": [
+            "root",
+            "stem",
+            "leaf"
+          ],
+          "wrong_index": 2,
+          "wrong": "seed",
+          "options": [
+            "leaf",
+            "flower",
+            "fruit"
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «الساق»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "الجذر لازم قبل الساق"
+          ],
+          "concepts": [
+            "stem",
+            "root"
+          ],
+          "target": "stem",
+          "correct": [
+            "root"
+          ],
+          "options": [
+            "fruit",
+            "leaf",
+            "root",
+            "seed"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "fruit",
+      "title": "الثمرة",
+      "difficulty": "easy",
+      "minutes": 3,
+      "questions": [
+        {
+          "template": "spell",
+          "difficulty": "easy",
+          "question": "ركّب اسم المفهوم",
+          "how": "اقرأ المعنى، واسحب الحروف لمكانها (أو اكبس عليها بالترتيب).",
+          "solution": [
+            "«تنمو من الزهرة وتحمي البذور التي بداخلها» = الثمرة"
+          ],
+          "concepts": [
+            "fruit"
+          ],
+          "target": "fruit",
+          "word": "الثمرة",
+          "clue": "تنمو من الزهرة وتحمي البذور التي بداخلها"
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «الثمرة»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "التلقيح لازم قبل الثمرة"
+          ],
+          "concepts": [
+            "fruit",
+            "pollination"
+          ],
+          "target": "fruit",
+          "correct": [
+            "pollination"
+          ],
+          "options": [
+            "pollination",
+            "leaf",
+            "stem",
+            "seed"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «أجزاء النبات» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«الهواء»: يأخذ النبات منه غازاً يحتاجه لصنع الغذاء، فهو من «حاجات النبات»، مش من «أجزاء النبات».",
+            "أما «أجزاء النبات»: الثمرة، الساق، الجذر."
+          ],
+          "concepts": [
+            "fruit",
+            "stem",
+            "root"
+          ],
+          "target": "fruit",
+          "family": [
+            "fruit",
+            "stem",
+            "root"
+          ],
+          "intruder": "air",
+          "intros": {
+            "fruit": "تنمو من الزهرة",
+            "stem": "يحمل النبتة",
+            "root": "الجزء تحت الأرض",
+            "air": "يأخذ النبات منه غازاً يحتاجه لصنع الغذاء"
+          }
+        },
+        {
+          "template": "unlocks",
+          "difficulty": "mid",
+          "question": "مين بيحتاج «الثمرة»؟ 🚶 رحلة",
+          "how": "بكل مفترق اختار مين بيحتاج اللي إنت عنده، وامشي لعنده. انتبه من ثعلوب 🦊، والبومة 🦉 بتساعدك (بنجمة).",
+          "solution": [
+            "الثمرة ← البذرة ← الإنبات",
+            "بعد «الثمرة» بييجي «البذرة»",
+            "بعد «البذرة» بييجي «الإنبات»"
+          ],
+          "concepts": [
+            "fruit",
+            "seed",
+            "germination"
+          ],
+          "target": "fruit",
+          "route": [
+            "fruit",
+            "seed",
+            "germination"
+          ],
+          "junctions": [
+            [
+              "root",
+              "seed",
+              "stem",
+              "leaf"
+            ],
+            [
+              "root",
+              "germination",
+              "stem",
+              "leaf"
+            ]
+          ],
+          "hints": [
+            [
+              "فكّر: مين بيستعمل «الثمرة» أو بيطلع منه؟",
+              "تذكّر: تنمو من الزهرة",
+              "المحطة الجاية اسمها بيبلش بـ «ال…»"
+            ],
+            [
+              "فكّر: مين بيستعمل «البذرة» أو بيطلع منه؟",
+              "تذكّر: توجد داخل الثمرة",
+              "المحطة الجاية اسمها بيبلش بـ «ال…»"
+            ]
+          ],
+          "whys": [
+            "«البذرة»: توجد داخل الثمرة",
+            "«الإنبات»: أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "leaf",
+      "title": "الورقة",
+      "difficulty": "medium",
+      "minutes": 5,
+      "questions": [
+        {
+          "template": "memory",
+          "difficulty": "easy",
+          "question": "بطاقات الذاكرة: «الورقة» وجيرانه",
+          "how": "اقلب بطاقتين: إذا المفهوم ومعناه، بيضلّوا مفتوحين.",
+          "solution": [
+            "الورقة: جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء",
+            "الهواء: يأخذ النبات منه غازاً يحتاجه لصنع الغذاء",
+            "الساق: يحمل النبتة وينقل الماء من الجذر إلى الأوراق والغذاء من الأوراق لباقي النبتة"
+          ],
+          "concepts": [
+            "leaf",
+            "air",
+            "stem"
+          ],
+          "target": "leaf",
+          "pairs": [
+            [
+              "leaf",
+              "جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء"
+            ],
+            [
+              "air",
+              "يأخذ النبات منه غازاً يحتاجه لصنع الغذاء"
+            ],
+            [
+              "stem",
+              "يحمل النبتة"
+            ]
+          ]
+        },
+        {
+          "template": "prereq",
+          "difficulty": "mid",
+          "question": "شو لازم تعرف قبل «الورقة»؟",
+          "how": "اسحب المفاتيح الصح للباب (أو اكبس عليها): كل مفهوم لازم قبله بيفتح قفل.",
+          "solution": [
+            "الهواء لازم قبل الورقة",
+            "الساق لازم قبل الورقة",
+            "ضوء الشمس لازم قبل الورقة"
+          ],
+          "concepts": [
+            "leaf",
+            "air",
+            "stem",
+            "sunlight"
+          ],
+          "target": "leaf",
+          "correct": [
+            "air",
+            "stem",
+            "sunlight"
+          ],
+          "options": [
+            "flower",
+            "sunlight",
+            "air",
+            "fruit",
+            "stem",
+            "seed"
+          ]
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «أجزاء النبات» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«التربة»: تثبّت الجذر، فهي من «حاجات النبات»، مش من «أجزاء النبات».",
+            "أما «أجزاء النبات»: الورقة، الزهرة، الجذر."
+          ],
+          "concepts": [
+            "leaf",
+            "flower",
+            "root"
+          ],
+          "target": "leaf",
+          "family": [
+            "leaf",
+            "flower",
+            "root"
+          ],
+          "intruder": "soil",
+          "intros": {
+            "leaf": "جزء أخضر مسطّح يصنع فيه النبات غذاءه من ضوء الشمس والماء والهواء",
+            "flower": "جزء مسؤول عن التكاثر",
+            "root": "الجزء تحت الأرض",
+            "soil": "تثبّت الجذر"
+          }
+        },
+        {
+          "template": "sequence",
+          "difficulty": "mid",
+          "question": "ابنِ جسر «الورقة»",
+          "how": "ركّب قطع الجسر بالترتيب من الأساس (اسحب أو اكبس)، وبعدين «🚗 يلا!» وخلّي البذرة تقطع.",
+          "solution": [
+            "الجذر قبل الساق",
+            "الساق قبل الورقة"
+          ],
+          "concepts": [
+            "leaf",
+            "root",
+            "stem"
+          ],
+          "target": "leaf",
+          "order": [
+            "root",
+            "stem",
+            "leaf"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": "seed",
+      "title": "البذرة",
+      "difficulty": "easy",
+      "minutes": 3,
+      "questions": [
+        {
+          "template": "meaning",
+          "difficulty": "easy",
+          "question": "شو معنى «البذرة»؟",
+          "how": "اسحب الاسم للفقاعة اللي فيها المعنى الصح (أو اكبس عليها).",
+          "solution": [
+            "البذرة: توجد داخل الثمرة، ويمكن أن تنمو لتصبح نبتة جديدة"
+          ],
+          "concepts": [
+            "seed"
+          ],
+          "target": "seed",
+          "options": [
+            "توجد داخل الثمرة، ويمكن أن تنمو لتصبح نبتة جديدة",
+            "تنمو من الزهرة وتحمي البذور التي بداخلها",
+            "الجزء تحت الأرض؛ يثبّت النبتة ويمتص الماء والأملاح من التربة",
+            "جزء مسؤول عن التكاثر، ويتحوّل إلى ثمرة بعد التلقيح"
+          ],
+          "answer": "توجد داخل الثمرة، ويمكن أن تنمو لتصبح نبتة جديدة"
+        },
+        {
+          "template": "odd_one_out",
+          "difficulty": "mid",
+          "question": "كلهم من «أجزاء النبات» إلا واحد. مين الدخيل؟",
+          "how": "كل واحد بيعرّف عن حاله. واحد بس مش من المجموعة: شدّه لبرا!",
+          "solution": [
+            "«ضوء الشمس»: تستخدمه الورقة لصنع الغذاء، فهو من «حاجات النبات»، مش من «أجزاء النبات».",
+            "أما «أجزاء النبات»: البذرة، الزهرة، الثمرة."
+          ],
+          "concepts": [
+            "seed",
+            "flower",
+            "fruit"
+          ],
+          "target": "seed",
+          "family": [
+            "seed",
+            "flower",
+            "fruit"
+          ],
+          "intruder": "sunlight",
+          "intros": {
+            "seed": "توجد داخل الثمرة",
+            "flower": "جزء مسؤول عن التكاثر",
+            "fruit": "تنمو من الزهرة",
+            "sunlight": "تستخدمه الورقة لصنع الغذاء"
+          }
+        },
+        {
+          "template": "unlocks",
+          "difficulty": "mid",
+          "question": "مين بيحتاج «البذرة»؟ 🚶 رحلة",
+          "how": "بكل مفترق اختار مين بيحتاج اللي إنت عنده، وامشي لعنده. انتبه من ثعلوب 🦊، والبومة 🦉 بتساعدك (بنجمة).",
+          "solution": [
+            "البذرة ← الإنبات",
+            "بعد «البذرة» بييجي «الإنبات»"
+          ],
+          "concepts": [
+            "seed",
+            "germination"
+          ],
+          "target": "seed",
+          "route": [
+            "seed",
+            "germination"
+          ],
+          "junctions": [
+            [
+              "stem",
+              "leaf",
+              "root",
+              "germination"
+            ]
+          ],
+          "hints": [
+            [
+              "فكّر: مين بيستعمل «البذرة» أو بيطلع منه؟",
+              "تذكّر: توجد داخل الثمرة",
+              "المحطة الجاية اسمها بيبلش بـ «ال…»"
+            ]
+          ],
+          "whys": [
+            "«الإنبات»: أول مرحلة: تمتص البذرة الماء فيخرج منها جذر وساق صغيران"
+          ]
+        },
+        {
+          "template": "sequence",
+          "difficulty": "mid",
+          "question": "ابنِ جسر «البذرة»",
+          "how": "ركّب قطع الجسر بالترتيب من الأساس (اسحب أو اكبس)، وبعدين «🚗 يلا!» وخلّي البذرة تقطع.",
+          "solution": [
+            "الثمرة قبل البذرة",
+            "البذرة قبل الإنبات"
+          ],
+          "concepts": [
+            "seed",
+            "fruit",
+            "germination"
+          ],
+          "target": "seed",
+          "order": [
+            "fruit",
+            "seed",
+            "germination"
+          ]
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "prereq(flower): nothing comes before it",
+    "sort(flower): needs concepts both before and after it",
+    "adjust(flower): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "adjust(root): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "adjust(stem): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "adjust(fruit): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "unlocks(leaf): nothing comes after it",
+    "sort(leaf): needs concepts both before and after it",
+    "who_am_i(leaf): the meaning is too short for 2+ clues",
+    "predict(leaf): nothing needs it",
+    "adjust(leaf): not a numeric subject (memorise/understand lessons do not get number sliders)",
+    "adjust(seed): not a numeric subject (memorise/understand lessons do not get number sliders)"
+  ],
+  "art": {}
+}
